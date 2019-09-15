@@ -3,7 +3,7 @@
 
 <head>
   <title>BloomBox, E-Cell KJSCE</title>
-  <link rel="icon" type="image/ico" href="_images/BloomBox, E-Cell KJSCE - Logo Small.png" />
+  <link rel="icon" type="image/ico" href="media/images/BloomBox, E-Cell KJSCE - Logo Small.png" />
 
   <!-- Required meta tags -->
   <meta charset="utf-8" />
@@ -24,30 +24,21 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <link rel="stylesheet" href="css/style.css" />
-
-  <link rel="stylesheet" href="/css/_styles/footer" />
-  <link rel="stylesheet" href="./css/_styles/homepage.css" />
-  <link rel="stylesheet" href="./css/_styles/navigation.css" />
-
   <!-- Home page CSS-->
-
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" href="./css/_styles/footer.css">
-  
-      <script src="https://kit.fontawesome.com/be4c1851d0.js"></script>
-
-
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/_styles/footer.css" />
+  <link rel="stylesheet" href="styles/_styles/homepage.css" />
+  <link rel="stylesheet" href="styles/_styles/navigation.css" />
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+  <!-- Navigation Bar Start -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="">
-        <img src="_images/BloomBox, E-Cell KJSCE - Logo.png" alt="BloomBox - Logo" height="50" />
+        <img src="media/images/BloomBox, E-Cell KJSCE - Logo.png" alt="BloomBox - Logo" height="50" />
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,19 +53,13 @@
             <a class="nav-link" href="campus-company.html">Campus Company</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="events.html">
-              Events
-            </a>
+            <a class="nav-link" href="events.html">Events</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="partners.html">
-              Partners
-            </a>
+            <a class="nav-link" href="partners.html">Partners</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link " href="team.html">
-              Team
-            </a>
+            <a class="nav-link " href="team.html">Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About Us</a>
@@ -83,212 +68,296 @@
       </div>
     </div>
   </nav>
+  <!-- Navigation Bar End -->
+
+  <!-- Full Page Image Header with Vertically Centered Content Start -->
+  <header class="masthead" style="background-image: url(media/images/home/SVV-Campusss.jpeg)">
+    <div class="container h-100 text-center justify-content-center align-items-center">
+      <div class="row h-100 align-items-center py-5 text-center">
+        <div class="col-12 text-center">
+          <br>
+          <br>
+          <h1 class="text-light"><strong>BloomBox, Entrepreneruship Cell</strong></h1>
+          <h2 class="text-light"><strong>K. J. Somaiya College of Engineering</strong></h2>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Full Page Image Header with Vertically Centered Content End -->
+
+  <!-- Go Top Arrow Start -->
   <i class="fa fa-arrow-circle-up" aria-hidden="true" id="gotop-button" title="Go to top" onclick="topFunction()"></i>
-  <div class="home-image" id="welcome-image"></div>
-  <div class="site-blocks-cover inner-page overlay"
-    style="background-image: url('https://images.fineartamerica.com/images-medium-large-5/3-abstract-technical-background-trafficanalyzer.jpg');"
-    data-aos="fade" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-7 text-center">
-          <h1 class="mb-5 lead"><strong><b class="text-light ">Welcome to Bloombox </b></strong></h1>
-          <h5>
-            <ul class="welcome-list">
-              <li><a href="#aboutus">About Us</a></li>
-              <li class="separator">&#9866;</li>
-              <li><a href="#initiatives">Initiatives</a></li>
-              <li class="separator">&#9866;</li>
-              <li><a href="#events">Upcoming Events</a></li>
-              <li class="separator">&#9866;</li>
-              <li><a href="#campuscompany">Campus Company</a></li>
-            </ul>
-          </h5>
+  <!-- Go Top Arrow End -->
+
+  <!-- Initiatives Start -->
+  <div class="container home-campuscompany py-3 text-center" id="campuscompany">
+    <h2 class="text-center">Initiatives</h2>
+    <div class="row py-1">
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/TEN.jpeg"
+            alt="TEN Magzine - Connecting Youth">
+          <h5 class="py-1">Campus Company</h5>
+        </div>
+      </div>
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/SnackBar.jpeg"
+            alt="SnackBar Canteen - Treat Yourself">
+          <h5 class="py-1">Hackathons</h5>
+        </div>
+      </div>
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/Engistat.jpeg"
+            alt="Engistat - Electronics Component Rental Store">
+          <h5 class="py-1">Speaker Sessions</h5>
+        </div>
+      </div>
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/G3.jpeg"
+            alt="G3 - Generations Going Green">
+          <h5 class="py-1">Startup Visits</h5>
         </div>
       </div>
     </div>
   </div>
-  <div class="home-aboutus" id="aboutus">
-    <h1>
-      About Us
-    </h1>
-    <p>
-      BloomBox is the entrepreneurship cell at K. J. Somaiya College of
-      Engineering. We believe that engineers harbour a latent potential to be
-      the employment generators of tomorrow, pioneering technological and
-      economic growth of the country.
-    </p>
-    <p>
-      BloomBox is intended as a platform to motivate and educate students
-      about entrepreneurship and encourage them to flesh out their ideas in
-      business terms and form global enterprises that combine technology,
-      vision and business acumen. Our aim is to channelize our efforts towards
-      spreading knowledge and inculcating enthusiasm amongst the students by
-      altering their perspective of business in a manner that they shall
-      cherish and shall remain etched in their memory.
-    </p>
+  <!-- Initiatives End -->
+
+  <div class="container">
+    <hr class="bg-dark">
   </div>
-  <div class="home-initiatives" id="initiatives">
+
+  <!-- Events Start -->
+  <div class="container home-events text-center py-4" id="events">
+    <h2 class="text-center">Event Highlights</h2>
     <div class="container">
-      <h1 align="center"> Initiatives</h1>
-      <br>
-      <div class="row">
-
-        <div class="col-md-6 col-sm-12 col-xs-12" align="center">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="_images/Home Images/Wordbit.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Word Bit</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="btn btn-primary">To Know More</a>
+      <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+          <div class="carousel-item col-md-4  active">
+            <div class="panel panel-default">
+              <div class="panel-thumbnail">
+                <a href="#" title="image 1" class="thumb">
+                  <img class="img-fluid mx-auto d-block" id="Event-Carasoul" src="media/images/events/B-Plan/img1.jpg"
+                    alt="slide 1">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4 ">
+            <div class="panel panel-default">
+              <div class="panel-thumbnail">
+                <a href="#" title="image 3" class="thumb">
+                  <img class="img-fluid mx-auto d-block" src="media/images/events/Ennovate/Ennovate_02.jpeg"
+                    alt="slide 2">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4 ">
+            <div class="panel panel-default">
+              <div class="panel-thumbnail">
+                <a href="#" title="image 4" class="thumb">
+                  <img class="img-fluid mx-auto d-block" src="media/images/events/HackIoT/img1.jpg" alt="slide 3">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4 ">
+            <div class="panel panel-default">
+              <div class="panel-thumbnail">
+                <a href="#" title="image 5" class="thumb">
+                  <img class="img-fluid mx-auto d-block"
+                    src="media/images/events/Speaker Session/Aditya Save/IMG_20190828_174711.jpg" alt="slide 4">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item col-md-4 ">
+            <div class="panel panel-default">
+              <div class="panel-thumbnail">
+                <a href="#" title="image 6" class="thumb">
+                  <img class="img-fluid mx-auto d-block"
+                    src="media/images/events/Speaker Session/Long March to Enterprenuership/img1.jpg" alt="slide 5">
+                </a>
+              </div>
             </div>
           </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <br>
+    <a href="events.html" target="_blank"><button type="button" class="btn btn-primary text-center py-1"
+        style="background-color: #0033cc">Events &#8599;</button></a>
+  </div>
+  <!-- Events End -->
 
-        <div class="col-md-6 col-sm-12 col-xs-12" align="center">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="_images/Home Images/Wordbit.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Startup Saturday</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="btn btn-primary">To Know More</a>
-            </div>
+  <div class="container">
+    <hr class="bg-dark">
+  </div>
+
+  <!-- Campus Companies Start -->
+  <div class="container home-campuscompany py-3 text-center" id="campuscompany">
+    <h2 class="text-center">Campus Company</h2>
+    <div class="row py-1">
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1 h-100">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/TEN.jpeg"
+            alt="TEN Magzine - Connecting Youth">
+          <h5 class="py-1">TEN - Connecting Youth</h5>
+        </div>
+      </div>
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1 h-100">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/SnackBar.jpeg"
+            alt="SnackBar Canteen - Treat Yourself">
+          <h5 class="py-1">SnackBar Canteen</h5>
+        </div>
+      </div>
+      <div class="col-sm-3 py-1">
+        <div class="card text-center py-1 h-100">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/Engistat.jpeg"
+            alt="Engistat - Electronics Component Rental Store">
+          <h5 class="py-1">Engistat</h5>
+        </div>
+      </div>
+      <div class="col-sm-3 py-1 py-1">
+        <div class="card text-center py-1 h-100">
+          <img class="card-img-top" src="media/images/campus-company/cc-logos/G3.jpeg"
+            alt="G3 - Generations Going Green">
+          <h5 class="py-1">Generations Going Green</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <a href="campus-company.html" target="_blank"><button type="button" class="btn btn-primary text-center py-1"
+        style="background-color: #0033cc">Campus Company &#8599;</button></a>
+  </div>
+  <!-- Campus Companies End -->
+
+  <div class="container">
+    <hr class="bg-dark">
+  </div>
+
+  <!-- Core Values and Skills Start -->
+  <div class="container">
+    <div class="row mb-2 justify-content-center">
+      <div class="col-md-12 text-center">
+        <h2 class="text-center mb-3">Skills Needed for Strong Buisness</strong></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="site-block-feature-2 d-flex rounded mb-2">
+          <div class="text">
+            <h3>Core Values</h3>
+            <p>Core values define the organization in terms of the principles and values the leaders will follow in
+              carrying out the activities of the organization.</p>
           </div>
         </div>
-
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="site-block-feature-2 d-flex rounded mb-2">
+          <div class="text" style="width:100%;">
+            <h3>Vision</h3>
+            <p>Big picture of what you want to achieve.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="site-block-feature-2 d-flex rounded mb-2">
+          <div class="text">
+            <h3>Mission</h3>
+            <p>A companion statement often created with the vision and mission is a statement of core values.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="site-block-feature-2 d-flex rounded mb-2">
+          <div class="text">
+            <h3>Strategies </h3>
+            <p>Strategies are one or more ways to use the mission statement in order to achieve the vision statement.
+              Although an organization will have just one vision statement and one mission statement, it may have
+              several strategies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="site-block-feature-2 d-flex rounded mb-2">
+          <div class="text">
+            <h3>Objectives </h3>
+            <p>Objectives provide specific milestones with a specific timeline for achieving a goa</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="site-block-feature-2 d-flex rounded mb-2">
+          <div class="text">
+            <h3>Vision Statement</h3>
+            <p>A mental picture of what you want to accomplish or achieve. For example, your vision may be a
+              successful winery business or an economically active community</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="home-events" id="events">
-    <h1>
-      Our First Event
-    </h1>
-    <div class="container-fluid">
-        <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
-            <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                <div class="carousel-item col-md-4  active">
-                   <div class="panel panel-default">
-                      <div class="panel-thumbnail">
-                        <a href="#" title="image 1" class="thumb">
-                          <img class="img-fluid mx-auto d-block" id= "Event-Carasoul"src="_images/Events Images/Speaker Session Aditya Save/IMG_20190828_174711.jpg" alt="slide 1">
-                        </a>
-                      </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                   <div class="panel panel-default">
-                      <div class="panel-thumbnail">
-                        <a href="#" title="image 3" class="thumb">
-                         <img class="img-fluid mx-auto d-block" src="_images/Events Images/Speaker Session Aditya Save/IMG_20190828_180100.jpg" alt="slide 2">
-                        </a>
-                      </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                   <div class="panel panel-default">
-                      <div class="panel-thumbnail">
-                        <a href="#" title="image 4" class="thumb">
-                         <img class="img-fluid mx-auto d-block" src="_images/Events Images/Speaker Session Aditya Save/IMG_20190828_180149.jpg" alt="slide 3">
-                        </a>
-                      </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                    <div class="panel panel-default">
-                      <div class="panel-thumbnail">
-                        <a href="#" title="image 5" class="thumb">
-                         <img class="img-fluid mx-auto d-block" src="_images/Events Images/Speaker Session Aditya Save/IMG_20190828_184048.jpg" alt="slide 4">
-                        </a>
-                      </div>
-                    </div>
-                </div>
-                <div class="carousel-item col-md-4 ">
-                  <div class="panel panel-default">
-                      <div class="panel-thumbnail">
-                        <a href="#" title="image 6" class="thumb">
-                          <img class="img-fluid mx-auto d-block" src="_images/Events Images/Speaker Session Aditya Save/IMG_20190828_184444.jpg" alt="slide 5">
-                        </a>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+  <!-- Core Values and Skills End -->
+
+  <div class="container">
+    <hr class="bg-dark">
+  </div>
+
+  <!-- Social Media Plugins Start -->
+  <div class="container py-2">
+    <h2 class="text-center">Social Media</h2>
+    <div class="row">
+      <div class="col-sm-6 text-primary py-1 px-1 text-center">
+        <h5 class="py-1">Facebook</h5>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+          src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
+        <div class="fb-page" data-href="https://www.facebook.com/bloombox.kjsce" data-tabs="timeline" data-width=""
+          data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true"
+          data-show-facepile="true" data-chrome="transparent noscrollbar">
+          <blockquote cite="https://www.facebook.com/bloombox.kjsce" class="fb-xfbml-parse-ignore"><a
+              href="https://www.facebook.com/bloombox.kjsce">BloomBox, E-Cell KJSCE</a></blockquote>
         </div>
+      </div>
+      <div class="col-sm-6 text-primary py-1 px-1 text-center">
+        <h5 class="py-1">Twitter</h5>
+        <a class="twitter-timeline" target="_blank" href="https://twitter.com/bloombox_kjsce"
+          data-widget-id="673755081871745024" data-screen-name="BloomBox, E-Cell KJSCE" data-height="550"
+          data-chrome="transparent">Tweets by
+          @bloombox_kjsce</a>
+        <script>!function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = p + "://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "twitter-wjs");
+        </script>
+      </div>
     </div>
   </div>
+  <!-- Social Media Plugins End -->
 
-
-  <div class="home-campuscompany" id="campuscompany">
-    <div class="container">
-        <h1 align="center">Campus Company</h1>
-        <br><br>
-        <div class="row text-center text-lg-left">
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="campus-company.html" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="_images/Campus Company/LOGOS/g3.jpg" alt="">
-                  </a>
-                <h3 align="center">G3</h3>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="campus-company.html" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="_images/Campus Company/LOGOS/snackbar.jpg" alt="">
-                  </a>
-                  <h3 align="center">SnackBar</h3>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="campus-company.html" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="_images/Campus Company/LOGOS/techitin.jpg" alt="">
-                  </a>
-                  <h3 align="center">Techitin</h3>
-            </div>
-            <div class="col-lg-3 col-md-4 col-6">
-              <a href="campus-company.html" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="_images/Campus Company/LOGOS/ten.png" alt="">
-                  </a>
-                  <h3 align="center">Ten</h3>
-            </div>
-          </div>        
-    </div>
-  </div>
-
+  <!-- Footer Start -->
   <footer class="site-footer">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">
-            BloomBox is the entrepreneurship cell at K. J. Somaiya College of
-            Engineering. We believe that engineers harbour a latent potential
-            to be the employment generators of tomorrow, pioneering
-            technological and economic growth of the country. BloomBox is
-            intended as a platform to motivate and educate students about
-            entrepreneurship and encourage them to flesh out their ideas in
-            business terms and form global enterprises that combine
-            technology, vision and business acumen. Our aim is to channelize
-            our efforts towards spreading knowledge and inculcating enthusiasm
-            amongst the students by altering their perspective of business in
-            a manner that they shall cherish and shall remain etched in their
-            memory.
-          </p>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <h6>ideas</h6>
-          <ul class="footer-links">
-            <li><a href="index.html">Buisness Startups</a></li>
-            <li><a href="index.html">Meet Real Buiness World</a></li>
-          </ul>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-md-4">
           <h6>Quick Links</h6>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
@@ -298,69 +367,62 @@
             <li><a href="partners.html">Partners</a></li>
           </ul>
         </div>
+        <div class="col-xs-6 col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
       </div>
-      <hr />
+      <hr>
     </div>
     <div class="container">
+      <div class="footer-copyright text-center py-1">Connect with us</a>
+      </div>
       <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">
-            Copyright &copy;
-            <a href="#">Designed by Team BloomBox Kjsce 2019-20</a>.
-          </p>
+        <div class="col ml-auto">
+          <div class="container">
+            <div class="social-media text-center">
+              <a href="https://www.facebook.com/bloombox.kjsce"><i
+                  class="fab fa-facebook-square fa-lg white-text fa-2x px-3 py-1"></i></a>
+              <a href="https://twitter.com/bloombox_kjsce"><i
+                  class="fab fa-twitter fa-lg white-text fa-2x px-3 py-1"></i></a>
+              <a href="https://www.linkedin.com/company/bloombox-e-cell-kjsce"><i
+                  class="fab fa-linkedin fa-lg white-text fa-2x px-3 py-1"></i></a>
+              <a href="https://www.instagram.com/bloombox_kjsce"><i
+                  class="fab fa-instagram fa-lg white-text fa-2x px-3 py-1"></i></a>
+            </div>
+          </div>
         </div>
-               <div class="col ml-auto">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-3 col-sm-3 col-xl-3 col-lg-3">
-                          <a href="https://www.facebook.com/" target="_blank">
-                            <i class="fab fa-facebook-square">
-                            
-                              </i></a>
-                
-               
-                     
-                      </div>
-                      <div class="col-md-3 col-sm-3 col-xl-3 col-lg-3">
-                          <a href="https://www.instagram.com/" target="_blank"> <i class="fab fa-instagram">
-                     
-                            </i></a>
-                         
-                        </div>
-                        <div class="col-md-3 col-sm-3 col-xl-3 col-lg-3">
-                            <a href="https://github.com/" target="_blank">
-                              <i class="fab fa-github">
-                             
-                                </i>
-                            </a>
-                       
-                          </div>
-                          <div class="col-md-3 col-sm-3 col-xl-3 col-lg-3">
-                              <a href="https://twitter.com/login" target="_blank">
-                                <i class="fab fa-twitter"></i></a>
-                             
-                            </div>
-                    </div>
-                  </div>
-                </div>
+      </div>
+      <div class="footer-copyright text-center py-3">Designed by BloomBox, E-Cell KJSCE</a>
       </div>
     </div>
   </footer>
+  <!-- Footer End -->
 
   <!-- Optional JavaScript -->
-  <script src="./js/_script/homepage.js"></script>
+  <script src="scripts/_script/homepage.js"></script>
+  <script src="https://kit.fontawesome.com/be4c1851d0.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous ">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous ">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
-  </script> 
+    </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </body>
 
 </html>
