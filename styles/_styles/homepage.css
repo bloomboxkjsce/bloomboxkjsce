@@ -22,10 +22,43 @@ body {
   cursor: pointer;
 }
 
+#godown-button {
+  width: 100%;
+  margin: 20px;
+  bottom: 50;
+  text-align: center;
+  font-size: 200%;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+}
+
+#godown-button:hover {
+  color: blue;
+}
+
 .masthead {
   height: 100vh;
   min-height: 100vh;
-  color:white;
+  color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
