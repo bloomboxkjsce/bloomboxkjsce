@@ -30,6 +30,11 @@
   <link rel="stylesheet" href="styles/_styles/footer.css" />
   <link rel="stylesheet" href="styles/_styles/teams.css" />
   <link rel="stylesheet" href="styles/_styles/navigation.css" />
+  <link rel="stylesheet" href="../_styles/profile-cards.css">
+  <link rel="stylesheet" href="../_styles/team.css">
+  <!-- user card changes -->
+  <link rel="stylesheet" href="./styles/_styles/project_cards.css">
+  <link rel="stylesheet" href="./styles/_styles/profile_card.css">
 </head>
 
 <body>
@@ -75,7 +80,14 @@
     <br>
     <br>
     <br>
-    <h1>Teams</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="site-heading text-center">
+          <h2>Our <span>Team</span></h2>
+          <h4>Meet our awesome and expert team members</h4>
+        </div>
+      </div>
+    </div>
   </div>
   <section class="container">
     <div class="component-systemTabs">
@@ -83,68 +95,388 @@
         <ul class="tabs"></ul>
 
         <div id="tab-1" data-tab-title="2019-20" class="tab-content current">
-          <div class="cards">
-            <div class="card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Centro_Toledo_Paran%C3%A1.jpg/300px-Centro_Toledo_Paran%C3%A1.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://img.r7.com/images/2014/07/03/11nozxswc4_1k05tgfx2a_file.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://www.urbanarts.com.br/imagens/produtos/184670/0/Ampliada/entre-a-cidade-e-a-natureza.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://cidadesportuguesas.com/wp-content/uploads/2018/09/cidade-de-chaves-portugal.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://s2.glbimg.com/VOLYVgo7bLWfvuHAJ2WkPeNYmws=/600x800/i.glbimg.com/og/ig/infoglobo1/f/original/2017/02/07/blog_forest_high.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://i0.wp.com/catalogodeviagens.net/wp-content/uploads/2016/11/canterbury-11.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://www.urbanarts.com.br/imagens/produtos/169507/0/Ampliada/cidade-sao-paulo-lespassants.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media-cdn.tripadvisor.com/media/vr-splice-j/06/e8/69/2a.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
+        <div>
+          <div class="team-post">
+            <h3>Chairperson</h3>
+          </div>
+          <div class="row team-items">
+            <div class="container">
+              <div class="col-md-4 single-item">
+                <div class="item">
+                  <div class="thumb">
+                    <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb">
+                    <div class="overlay">
+                      <h4>Lorem Ipsum</h4>
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      </p>
+                      <div class="social">
+                        <ul>
+                          <li class="twitter">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                          </li>
+                          <li class="pinterest">
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                          </li>
+                          <li class="instagram">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                          </li>
+                          <li class="vimeo">
+                            <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info">
+                    <span class="message">
+                      <a href="#"><i class="fas fa-envelope-open"></i></a>
+                    </span>
+                    <h4>Lorem Ipsum</h4>
+                    <span>Project Manager</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div class="team-post">
+            <h3>Vice Chairperson</h3>
+          </div>
+          <div class="wrapper">
+            <div id="vice-chairperson">
+              <div class="card" id="heeral-dedhia">
+                <img src="../_images/profile-female.jpg" alt="Heeral Dedhia Profile Photo">
+                <div class="info ">
+                  <h2>Heeral Dedhia</h2>
+                  <p>VC &hyphen; Corporate Relations</p>
+                  <a href="mailto:email-id@somaiya.edu ">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center ">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="charmi-savla">
+                <img src="../_images/profile-female.jpg" alt="Charmi Savla Profile Photo">
+                <div class="info ">
+                  <h2>Charmi Savla</h2>
+                  <p>VC &hyphen; Events &amp; Logistics</p>
+                  <a href="mailto:email-id@somaiya.edu ">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center ">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-post">
+            <h3>Finance &amp; Marketing Secretary</h3>
+          </div>
+          <div class="wrapper">
+            <div id="finance-and-marketing-secretary">
+              <div class="card" id="baiju-dodhia">
+                <img src="../_images/profile-male.jpg" alt="Baiju Dodhia Profile Photo" />
+                <div class="info ">
+                  <h2>Baiju Dodhia</h2>
+                  <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center ">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-post">
+            <h3>Marketing Team</h3>
+          </div>
+          <div class="wrapper">
+            <div id="marketing-team">
+              <div class="card" id="aniket-kulkarni">
+                <img src="../_images/profile-male.jpg" alt="Aniket Kulkarni Profile Photo" />
+                <div class="info ">
+                  <h2>Aniket Kulkarni</h2>
+                  <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center ">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="nidhi-jajda">
+                <img src="../_images/profile-female.jpg" alt="Nidhi Jajda Profile Photo">
+                <div class="info ">
+                  <h2>Nidhi Jajda</h2>
+                  <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="tanisha-ashar">
+                <img src="../_images/profile-female.jpg" alt="Tanisha Ashar Profile Photo" />
+                <div class="info ">
+                  <h2>Tanisha Ashar</h2>
+                  <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="marketing-team">
+              <div class="card" id="sanyam-gandhi">
+                <img src="../_images/profile-male.jpg" alt="Sanyam Gandhi Profile Photo">
+                <div class="info ">
+                  <h2>Sanyam Gandhi</h2>
+                  <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="jay-jain">
+                <img src="../_images/profile-male.jpg" alt="Jay Jain Profile Photo">
+                <div class="info ">
+                  <h2>Jay Jain</h2>
+                  <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                  <div style="display:flex; align-content: center;justify-content:center">
+                    <button style="background-image: url(../../../_images/facebook.svg) "></button>
+                    <button style="background-image: url(../../../_images/linkedin.svg) "></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-post">
+          <h3>Campus Company Head</h3>
+        </div>
+        <div class="wrapper">
+          <div id="campus-company-head">
+            <div class="card" id="niket-mehta">
+              <img src="../_images/profile-male.jpg" alt="Niket Mehta Profile Photo" />
+              <div class="info">
+                <h2>Niket Mehta</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-post">
+          <h3>Events &amp; Public Relations Head</h3>
+        </div>
+        <div class="wrapper">
+          <div id="events-and-pr-head">
+            <div class="card" id="chaitanya-tamhankar">
+              <img src="../_images/profile-male.jpg" alt="Chaitanya Tamhankar Profile Photo" />
+              <div class="info">
+                <h2>Chaitanya Tamhankar</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-post">
+          <h3>Events &amp; Public Relations Team</h3>
+        </div>
+        <div class="wrapper">
+          <div id="events-and-pr-team">
+            <div class="card" id="krunal-dattani">
+              <img src="../_images/profile-male.jpg" alt="Krunal Dattani Profile Photo" />
+              <div class="info">
+                <h2>Krunal Dattani</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="niyati-mervana">
+              <img src="../_images/profile-female.jpg" alt="Niyati Mervana Profile Photo" />
+              <div class="info">
+                <h2>Niyati Mervana</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="devesh-lalluwadia">
+              <img src="../_images/profile-male.jpg" alt="Devesh Lalluwadia Profile Photo" />
+              <div class="info">
+                <h2>Devesh Lalluwadia</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+          <div id="events-and-pr-team">
+            <div class="card" id="fenny-keniya">
+              <img src="../_images/profile-female.jpg" alt="Fenny Keniya Profile Photo" />
+              <div class="info">
+                <h2>Fenny Keniya</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="jash-''">
+              <img src="../_images/profile-male.jpg" alt="Jash '' Profile Photo" />
+              <div class="info">
+                <h2>Jash ''</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="dhruman-gohil">
+              <img src="../_images/profile-male.jpg" alt="Dhruman Gohil Profile Photo" />
+              <div class="info">
+                <h2>Dhruman Gohil</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-post">
+          <h3>Social Media &amp; Content Team</h3>
+        </div>
+        <div class="wrapper">
+          <div id="social-media-and-content-team">
+            <div class="card" id="shantanu-godbole">
+              <img src="../_images/profile-male.jpg" alt="Shantanu Godbole Profile Photo" />
+              <div class="info">
+                <h2>Shantanu Godbole</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="Vruksha Joshi">
+              <img src="../_images/profile-female.jpg" alt="Vruksha Joshi Profile Photo" />
+              <div class="info">
+                <h2>Vruksha Joshi</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-post">
+          <h3>Technical Team</h3>
+        </div>
+        <div class="wrapper">
+          <div id="technical-team">
+            <div class="card" id="vedang-parasnis">
+              <img src="../_images/profile-male.jpg" alt="Vedang Parasnis Profile Photo" />
+              <div class="info">
+                <h2>Vedang Parasnis</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="aagam-shah">
+              <img src="../_images/profile-male.jpg" alt="Aagam Shah Profile Photo" />
+              <div class="info">
+                <h2>Aagam Shah</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="team-post">
+          <h3>Social Team</h3>
+        </div>
+        <div class="wrapper">
+          <div id="social-team">
+            <div class="card" id="sejal-chordiya">
+              <img src="../_images/profile-female.jpg" alt="Sejal Chordiya Profile Photo" />
+              <div class="info">
+                <h2>Sejal Chordiya</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="krish-parekh">
+              <img src="../_images/profile-male.jpg" alt="Krish Parekh Profile Photo" />
+              <div class="info">
+                <h2>Krish Parekh</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="social-team">
+            <div class="card" id="imtiyaz-shaikh">
+              <img src="../_images/profile-male.jpg" alt="Imtiyaz Shaikh Profile Photo" />
+              <div class="info">
+                <h2>Imtiyaz Shaikh</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="bishandeep-arora">
+              <img src="../_images/profile-female.jpg" alt="Bishandeep Arora Profile Photo" />
+              <div class="info">
+                <h2>Bishandeep Arora</h2>
+                <a href="mailto:email-id@somaiya.edu">email-id@somaiya.edu</a>
+                <div style="display:flex; align-content: center;justify-content:center">
+                  <button style="background-image: url(../../../_images/facebook.svg)"></button>
+                  <button style="background-image: url(../../../_images/linkedin.svg)"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigation-padding"></div>
         </div>
 
         <div id="tab-2" data-tab-title="2018-19" class="tab-content">
@@ -184,40 +516,125 @@
           </div>
         </div>
 
+        <!-- changes in tabs -->
         <div id="tab-3" data-tab-title="2017-18" class="tab-content">
-          <div class="cards">
-            <div class="card">
-              <img
-                src="http://www.redetiradentes.com.br/ronaldotiradentes/wp-content/uploads/2018/10/cidade-suja.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
+          <section id="team" class="team-area">
+            <div class="container">
+
+              <div class="row team-items">
+                <div class="col-md-4 single-item">
+                  <div class="item">
+                    <div class="thumb">
+                      <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb">
+                      <div class="overlay">
+                        <h4>Lorem Ipsum</h4>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="social">
+                          <ul>
+                            <li class="twitter">
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="pinterest">
+                              <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </li>
+                            <li class="instagram">
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="vimeo">
+                              <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <span class="message">
+                        <a href="#"><i class="fas fa-envelope-open"></i></a>
+                      </span>
+                      <h4>Lorem Ipsum</h4>
+                      <span>Project Manager</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- second -->
+                <div class="col-md-4 single-item">
+                  <div class="item">
+                    <div class="thumb">
+                      <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb">
+                      <div class="overlay">
+                        <h4>Lorem Ipsum</h4>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="social">
+                          <ul>
+                            <li class="twitter">
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="pinterest">
+                              <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </li>
+                            <li class="instagram">
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="vimeo">
+                              <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <span class="message">
+                        <a href="#"><i class="fas fa-envelope-open"></i></a>
+                      </span>
+                      <h4>Lorem Ipsum</h4>
+                      <span>App Developer</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- third -->
+                <div class="col-md-4 single-item">
+                  <div class="item">
+                    <div class="thumb">
+                      <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb">
+                      <div class="overlay">
+                        <h4>Lorem Ipsum</h4>
+                        <p>
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="social">
+                          <ul>
+                            <li class="twitter">
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="pinterest">
+                              <a href="#"><i class="fab fa-pinterest"></i></a>
+                            </li>
+                            <li class="instagram">
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="vimeo">
+                              <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <span class="message">
+                        <a href="#"><i class="fas fa-envelope-open"></i></a>
+                      </span>
+                      <h4>Lorem Ipsum</h4>
+                      <span>Web designer</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="card">
-              <img
-                src="http://3.bp.blogspot.com/_8HQJkDJu6Pk/TOMy5IBWt-I/AAAAAAAAAAU/VcqiBhy0foA/s1600/Monteiro+-+igreja+matriz.JPG" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://i.pinimg.com/originals/a1/6b/5e/a16b5e59e25c31bba4baab0ae9d43ffb.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-            <div class="card">
-              <img
-                src="https://eventosemjoinville.com.br/wp-content/uploads/2019/03/JCVB_presstrip-document%C3%A1rio-russo-600x800.jpg" />
-              <div class="cardContent">
-                <h2>Title of Card</h2>
-                <button>View</button>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
 
         <div id="tab-4" data-tab-title="2016-17" class="tab-content">
@@ -257,6 +674,9 @@
       </div>
     </div>
   </section>
+
+  <!-- section test team page -->
+  
 
   <!-- Footer Start -->
   <footer class="site-footer">
