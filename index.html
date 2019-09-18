@@ -134,6 +134,7 @@
   </div>
 
   <!-- Events Start -->
+  <section class="events details">
   <div class="container home-events text-center py-4" id="events">
     <h2 class="text-center">Event Highlights</h2>
     <div class="container">
@@ -189,12 +190,12 @@
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev" style="color: yellow !important">
+          <span class="carousel-control-prev-icon" aria-hidden="true" style="color: yellow !important"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next" style="color: yellow !important">
+          <span class="carousel-control-next-icon" aria-hidden="true" style="color: yellow !important"></span>
           <span class="sr-only">Next</span>
         </a>
       </div>
@@ -203,6 +204,7 @@
     <a href="events.html" target="_blank"><button type="button" class="btn btn-primary text-center py-1"
         style="background-color: #0033cc">Events &#8599;</button></a>
   </div>
+</section>
   <!-- Events End -->
 
   <div class="container">
@@ -372,15 +374,24 @@
           </ul>
         </div>
         <div class="col-xs-6 col-md-4">
-          <h6>Quick Links</h6>
+          <h6>Instant Contacts</h6>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
           </ul>
         </div>
         <div class="col-xs-6 col-md-4">
-          <h6>Quick Links</h6>
+          <h6>Instant Contacts</h6>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Baiju
+              <strong style="color: white">
+                Ph no
+              </strong>
+            </a></li>
+            <li><a href="index.html">Heral
+              <strong style="color: white">
+                Ph no:
+              </strong>
+            </a></li>
           </ul>
         </div>
       </div>
@@ -426,7 +437,14 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
     </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <style>
+    .events.details img{
+      height: 200px;
+      width: 300px;
+      object-fit:cover;
+      filter: brightness(60%)
+    }
+  </style>
 </body>
 
 </html>
