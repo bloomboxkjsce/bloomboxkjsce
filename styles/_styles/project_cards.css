@@ -1,13 +1,7 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-}
 section {
-  padding: 60px 0;
+  padding: 20px 0;
 }
+
 a,
 a:hover,
 a:focus,
@@ -15,6 +9,7 @@ a:active {
   text-decoration: none;
   outline: none;
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -210,8 +205,9 @@ ul {
   text-transform: uppercase;
 }
 
-.team-area .social li.twitter a {
-  background-color: #00b6f1;
+.team-area .social li.linkedin a {
+  background-color: #0077b5;
+  font-size: 150%;
 }
 
 .team-area .social li.pinterest a {
@@ -220,6 +216,7 @@ ul {
 
 .team-area .social li.facebook a {
   background-color: #3b5998;
+  font-size: 150%;
 }
 
 .team-area .social li.google-plus a {
