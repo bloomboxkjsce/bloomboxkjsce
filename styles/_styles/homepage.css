@@ -73,6 +73,13 @@ body {
   background-color: white;
 }
 
+.events.details img {
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
 @media (min-width: 768px) {
   /* show 3 items */
   .carouselPrograms .carousel-inner .active,

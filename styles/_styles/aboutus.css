@@ -37,6 +37,7 @@ body {
 .panel-body {
   padding-left: 20px;
   padding-right: 20px;
+  text-align: left;
 }
 
 .panel-title > a {
@@ -55,17 +56,52 @@ body {
   border-top-color: #eeeeee;
 }
 
-.map-container-google-11 {
+.map-container-google-6 {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
 }
 
-.map-container-google-11 iframe {
+.map-container-google-6 iframe {
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   position: absolute;
+}
+
+iframe {
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+form p {
+  margin: 1% 2%;
+  color: black;
+}
+
+textarea {
+  margin: 1% 2%;
+  padding: 5px;
+  width: 95%;
+}
+
+input {
+  margin: 1% 2%;
+  padding: 5px;
+  width: 95%;
+}
+
+button {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border-radius: 3px;
+  border: 0;
+  padding: 3px;
+  font-weight: 450;
+  min-width: 20%;
+  height: auto;
+  margin: 4% 0 0 0;
 }

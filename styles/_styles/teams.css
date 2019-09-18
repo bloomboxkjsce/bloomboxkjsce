@@ -1,12 +1,20 @@
-* {
-  /* margin: 0; */
-  /* padding: 0; */
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
 body {
   background-color: rgba(255, 255, 255);
+}
+
+.jumbotron {
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  padding: 32px 32px;
+}
+
+.p-1 {
+  padding: 0.5rem !important;
+}
+
+section {
+  padding: 0;
 }
 
 .containerTitles {
@@ -29,7 +37,7 @@ body {
   width: 100%;
 }
 .component-systemTabs .tabs-container ul.tabs {
-  margin: 20px 0;
+  margin: 0 0 15px 0;
   padding: 0px;
   list-style: none;
   text-align: center;
