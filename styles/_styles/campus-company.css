@@ -5,3 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+div.p-4 {
+  padding: 0 5% !important;
+}
