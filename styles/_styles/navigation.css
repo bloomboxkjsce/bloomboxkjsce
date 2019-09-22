@@ -1,6 +1,6 @@
 body {
   overflow-x: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 ::-webkit-scrollbar {
@@ -129,7 +129,7 @@ body {
     margin: 5px 0;
   }
   .dropdown-item {
-    font-size: 95%;   
+    font-size: 95%;
   }
   .navbar-light .navbar-nav .nav-link:before {
     border: none;
@@ -148,15 +148,13 @@ body {
   .ml-auto {
     margin: 8px 0;
     font-size: 130%;
-    height: 100vh;
     text-align: center;
-    padding-top:5%;
   }
   .nav-item {
-      height:14%;
-      text-align:center;
-      align-items: center;
-      justify-content:center;
+    height: 14%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   .dropdown:hover > .dropdown-menu {
     width: fit-content;
