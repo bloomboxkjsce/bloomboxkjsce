@@ -1,0 +1,33 @@
+.grid-container {
+  color: #263238;
+  font-size: 1.4em;
+}
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #cea135;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  /* border: 1px solid #000; */
+}
+.grid-item div {
+  height: auto;
+}
+#actionbody {
+  width: 90% !important;
+  height: auto;
+}
+.grid-item:nth-child(odd) {
+}
+.grid-item:nth-child(even) {
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.96fr 2fr; /* medida en ancho */
+
+  grid-gap: 0.5rem;
+}
