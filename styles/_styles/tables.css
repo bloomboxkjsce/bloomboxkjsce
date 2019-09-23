@@ -31,3 +31,8 @@
 
   grid-gap: 0.5rem;
 }
+
+.card-body {
+  cursor: pointer;
+  outline: none;
+}
