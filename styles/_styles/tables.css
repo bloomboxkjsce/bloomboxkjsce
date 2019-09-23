@@ -32,6 +32,9 @@
   grid-gap: 0.5rem;
 }
 
+span {
+  cursor: pointer !important;
+}
 .card-body {
   cursor: pointer;
   outline: none;
