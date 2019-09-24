@@ -1,6 +1,8 @@
 .grid-container {
   color: #263238;
   font-size: 1.4em;
+  margin: 5px;
+  padding: 5px;
 }
 .grid-item {
   display: flex;
@@ -16,6 +18,20 @@
 .grid-item div {
   height: auto;
 }
+
+.grid-item {
+  padding: 5px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item p {
+  margin: 5px;
+  padding: 5px;
+}
+
 #actionbody {
   width: 90% !important;
   height: auto;

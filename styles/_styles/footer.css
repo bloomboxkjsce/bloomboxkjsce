@@ -22,6 +22,10 @@ footer {
   justify-content: center;
 }
 
+.site-footer ul li {
+  margin-bottom: 10px;
+}
+
 .fa-instagram:hover {
   background: -webkit-linear-gradient(top right, purple, orange);
   -webkit-background-clip: text;
