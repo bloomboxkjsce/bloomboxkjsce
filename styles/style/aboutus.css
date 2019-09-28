@@ -35,6 +35,12 @@ body {
 }
 
 .panel-body {
+  background:rgba(1, 75, 140, 1);
+  color:white;
+  border-radius:3px;
+  padding-bottom:5px;
+  padding-top:5px;
+  margin-bottom:5px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: left;
@@ -93,7 +99,7 @@ input {
   width: 95%;
 }
 
-button {
+.submit {
   cursor: pointer;
   background-color: blue;
   color: white;

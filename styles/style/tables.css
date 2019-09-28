@@ -9,8 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #011638;
-    color: #ECEBE4;
+    background-color: rgba(1, 75, 140, 1);
+    color: white;
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
@@ -47,7 +47,7 @@
     display: grid;
     grid-template-columns: 0.96fr 2fr;
     /* medida en ancho */
-    grid-gap: 0.5rem;
+    grid-gap: 0.25rem;
 }
 
 span {
@@ -59,12 +59,11 @@ span {
 }
 
 .member-contact a {
-    color: #011638;
+    color: rgba(1, 75, 140, 1);
 }
 
 .more-less {
-    float: right;
-    margin: 0;
+    margin: 0 5px 0 5px;
     padding: 0;
     color: #ECEBE4;
 }
@@ -74,8 +73,15 @@ span {
 @media only screen and (max-width: 990px) {}
 
 @media only screen and (max-width: 520px) {
+    .grid-item {
+        font-size:80%;
+    }
     .member-contact {
         font-size: 80%;
+    }
+    .more-less {
+        margin:0;
+        size:80%;
     }
 }
 
