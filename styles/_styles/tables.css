@@ -1,57 +1,86 @@
 .grid-container {
-  color: #263238;
-  font-size: 1.4em;
-  margin: 5px;
-  padding: 5px;
-}
-.grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #333;
-  color: #cea135;
-  display: grid;
-  grid-template-columns: 1fr;
-  text-align: center;
-  /* border: 1px solid #000; */
-}
-.grid-item div {
-  height: auto;
+    color: #030027;
+    font-size: 1.4em;
+    margin: 5px;
+    padding: 5px;
 }
 
 .grid-item {
-  padding: 5px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #011638;
+    color: #ECEBE4;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+
+.grid-item div {
+    height: auto;
+}
+
+.grid-item {
+    padding: 5px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .grid-item p {
-  margin: 5px;
-  padding: 5px;
+    margin: 5px;
+    padding: 5px;
 }
 
 #actionbody {
-  width: 90% !important;
-  height: auto;
+    width: 100% !important;
+    height: auto;
 }
-.grid-item:nth-child(odd) {
-}
-.grid-item:nth-child(even) {
-}
+
+.grid-item:nth-child(odd) {}
+
+.grid-item:nth-child(even) {}
 
 .grid-container {
-  display: grid;
-  grid-template-columns: 0.96fr 2fr; /* medida en ancho */
-
-  grid-gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 0.96fr 2fr;
+    /* medida en ancho */
+    grid-gap: 0.5rem;
 }
 
 span {
-  cursor: pointer !important;
+    cursor: pointer !important;
 }
-.card-body {
-  cursor: pointer;
-  outline: none;
+
+.member-contact span {
+    color: red;
 }
+
+.member-contact a {
+    color: #011638;
+}
+
+.more-less {
+    float: right;
+    margin: 0;
+    padding: 0;
+    color: #ECEBE4;
+}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 990px) {}
+
+@media only screen and (max-width: 520px) {
+    .member-contact {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 360px) {}
+
+@media only screen and (max-width: 320px) {}
+
+@media only screen and (max-width: 240px) {}
