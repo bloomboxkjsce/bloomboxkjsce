@@ -248,10 +248,10 @@ hr {
 }
 
 @media only screen and (max-width: 600px) {
-  .text-inside-landingpage h1 {
+  .text-inside-landingpage h2 {
     font-size: 1.5rem;
   }
-  .text-inside-landingpage h2 {
+  .text-inside-landingpage h3 {
     font-size: 1.4rem;
   }
   #godown-button {
