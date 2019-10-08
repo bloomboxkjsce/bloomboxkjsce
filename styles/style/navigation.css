@@ -186,22 +186,19 @@ body {
     padding: 3px 30px;
   }
   .navbar {
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
   }
   .container {
     text-align: center;
   }
   .navbar-brand {
-    width: 70%;
+    /* width: 70%; */
     height: auto;
     padding: 0;
   }
   .navbar-brand img {
     width: 265px;
     height: auto;
-  }
-  .container {
-    padding-bottom: 2.5%;
   }
 }
 
@@ -218,7 +215,7 @@ body {
     z-index: 99;
   }
   .navbar-brand {
-    width: 80%;
+    /* width: 80%; */
     height: auto;
     padding: 0;
   }
@@ -236,7 +233,7 @@ body {
     height: 100%;
   }
   .navigation-padding {
-    padding-top: 65px;
+    padding-top: 69.1px;
   }
 }
 
@@ -269,6 +266,9 @@ body {
     height: 80%;
   }
   .navigation-padding {
-    padding-top: 53px;
+    padding-top: 87.43px;
+  }
+  .container {
+    justify-content: center;
   }
 }

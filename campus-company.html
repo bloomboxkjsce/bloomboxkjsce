@@ -31,6 +31,9 @@
     <meta name="geo.region" content="IN" />
     <link rel="canonical" href="" />
 
+    <!-- Animation on Scroll CSS -->
+    <link href="./styles/aos.css" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
@@ -82,16 +85,14 @@
     </nav>
     <!-- Navigation Bar End -->
 
-    <!-- Go Top Arrow Start -->
-    <i class="fa fa-arrow-circle-up" aria-hidden="true" id="gotop-button" title="Go to top" onclick="topFunction()"></i>
-    <!-- Go Top Arrow End -->
+    <div class="navigation-padding"> </div>
 
     <div class="site-blocks-cover inner-page overlay"
-        style="background-image: url('https://www.mobihealthnews.com/sites/default/files/merger.jpg');" data-aos="fade"
+        style="background-image: url('media/images/campus-company/cc-background-1.jpg');"
         data-stellar-background-ratio="0.5">
         <div class="container h-100 text-center justify-content-center align-items-center">
             <div class="row h-100 align-items-center py-5 text-center">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center" id="cc-title">
                     <br>
                     <br>
                     <h1 class="text-light"><strong>Campus Company</strong></h1>
@@ -101,15 +102,15 @@
         </div>
     </div>
 
-    <div class="text-center h2 font-weight-normal section-title my-5">
-        Student Campus Companies under BloomBox
+    <div class="text-center h1 font-weight-normal section-title my-5">
+        <u>Student Campus Companies under BloomBox</u>
     </div>
 
-    <div class="container">
+    <div class="container" id="cc-details">
         <div class="row mb-5 justify-content-center">
 
             <!--Branding Catalyst-->
-            <!-- <div class="col-sm-4 py-2">
+            <!-- <div class="col-sm-4 py-2" data-aos="zoom-in-up">
         <div class="card text-center py-1 h-100">
           <div class="image text-center">
             <img src="media/images/campus-company/cc-logos/Branding Catalyst.jpeg" alt="Branding Catalyst"
@@ -126,7 +127,7 @@
       </div> -->
 
             <!--BooksBecho-->
-            <!-- <div class="col-sm-4 py-2">
+            <!-- <div class="col-sm-4 py-2" data-aos="zoom-in-up">
         <div class="card text-center py-1 h-100">
           <div class="image text-center">
             <img src="media/images/campus-company/cc-logos/BooksBecho.jpeg" alt="BooksBecho" class="img-fluid">
@@ -142,14 +143,16 @@
       </div> -->
 
             <!--G3-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/G3.jpg" alt="Generations Going Green"
                             class="img-fluid">
                     </div>
                     <div class="p-4">
+                        <hr>
                         <h2 class="h5 text-black">G3</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Abhishek Trivedi (ETRX)<br> Maayank Kothari (COMPS)<br> Archit Patel
                             (EXTC)<br>
@@ -161,14 +164,16 @@
 
 
             <!--G3-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/Nurturing Lives.jpg" alt="Nurturing Lives"
                             class="img-fluid">
                     </div>
                     <div class="p-4">
+                        <hr>
                         <h2 class="h5 text-black">Nurturing Lives</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Dhruman Gohil (MECH)<br>
                             <b>Description :- </b><br> An NGO which aims to make a difference in lives of orphanage
@@ -180,7 +185,7 @@
             </div>
 
             <!--Snackbar-->
-            <!-- <div class="col-sm-4 py-2">
+            <!-- <div class="col-sm-4 py-2" data-aos="zoom-in-up">
         <div class="card text-center py-1 h-100">
           <div class="image text-center">
             <img src="media/images/campus-company/cc-logos/SnackBar.jpg" alt="SnackBar" class="img-fluid">
@@ -196,14 +201,16 @@
       </div> -->
 
             <!--Tech It In-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/Tech It In.jpg" alt="Tech It In"
                             class="img-fluid">
                     </div>
                     <div class="p-4">
+                        <hr>
                         <h2 class="h5 text-black">Tech It In</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Shubham Pareek (EXTC)<br> Mohammed Shayarwala (EXTC)<br>
                             <b>Description :- </b><br> Project guidance, Workshops and Provision of Electronic
@@ -214,7 +221,7 @@
             </div>
 
             <!--TEN-->
-            <!-- <div class="col-sm-4 py-2">
+            <!-- <div class="col-sm-4 py-2" data-aos="zoom-in-up">
         <div class="card text-center py-1 h-100">
           <div class="image text-center">
             <img src="media/images/campus-company/cc-logos/TEN.jpg" alt="TEN Magazine" class="img-fluid">
@@ -230,14 +237,16 @@
       </div> -->
 
             <!--Tool Trunk-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/Tool Trunk.jpg" alt="Tool Trunk"
                             class="img-fluid">
                     </div>
                     <div class="p-4">
+                        <hr>
                         <h2 class="h5 text-black">Tool Trunk</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Rishabh Agrawal (IT)<br> Viral Savla<br> Saket Gupta (IT)<br>
                             Saurabh Bajaj<br>
@@ -248,14 +257,16 @@
             </div>
 
             <!--Arctech Ventures-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/Artech Ventures.jpg" alt="Arctech Ventures"
                             class="img-fluid">
                     </div>
                     <div class="p-4">
+                        <hr>
                         <h2 class="h5 text-black">Arctech Ventures</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Akshat Kacheria (COMP)<br> Sarfaraz Iraque (COMP)<br> Harsh Bhayani
                             (COMP)<br> Siddhesh Patil (COMP)<br>
@@ -267,13 +278,15 @@
             </div>
 
             <!--TORQUE-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/TORQUE.jpg" alt="TORQUE" class="img-fluid">
                     </div>
                     <div class="p-4">
+                        <hr>
                         <h2 class="h5 text-black">TORQUE</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Viral Shah (EXTC)<br> Ruchit Makhwana (EXTC)<br> Amruta Palan
                             (EXTC)<br>
@@ -285,13 +298,15 @@
             </div>
 
             <!--Engistat-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/Engistat.jpg" alt="Engistat" class="img-fluid">
                     </div>
                     <div class="text p-4">
+                        <hr>
                         <h2 class="h5 text-black">Engistat</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Siddhesh Pawar (EXTC)<br> Mohammed Shayarwala (EXTC)<br>
                             <b>Description :- </b><br> The company rents microcontrollers, sells Electronics gadgets
@@ -302,18 +317,20 @@
             </div>
 
             <!--BookSquare-->
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" data-aos="zoom-in-up">
                 <div class="card text-center py-1 h-100">
                     <div class="image text-center">
                         <img src="media/images/campus-company/cc-logos/Book Square.jpg" alt="Book Square"
                             class="img-fluid">
                     </div>
                     <div class="text p-4">
+                        <hr>
                         <h2 class="h5 text-black">BookSquare</h2>
+                        <hr>
                         <p class="text-left">
                             <b>Students :- </b><br> Rajat Bucha (IT)<br> Adarsh Totla (IT)<br> Kaushal Wattamwar
                             (MECH)<br> Tanmay Mulmule (MECH) <br>
-                            <b>Description :- </b><br> Selling technical books on rental basis.
+                            <b>Description :- </b><br> Selling technical books.
                         </p>
                     </div>
                 </div>
@@ -403,6 +420,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
         </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Animation on Scroll JS -->
+    <script src="./scripts/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 

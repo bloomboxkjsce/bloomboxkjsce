@@ -44,6 +44,9 @@
     <link rel="stylesheet" href="./styles/style/events.css" />
     <link rel="stylesheet" href="./styles/style/footer.css" />
 
+    <!-- Animation on Scroll CSS -->
+    <link href="styles/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -84,15 +87,11 @@
     </nav>
     <!-- Navigation Bar End -->
 
-    <!-- Go Top Arrow Start -->
-    <i class="fa fa-arrow-circle-up" aria-hidden="true" id="gotop-button" title="Go to top" onclick="topFunction()"></i>
-    <!-- Go Top Arrow End -->
-
     <div class="navigation-padding"></div>
 
     <!-- Full Page Image Header with Vertically Centered Content Start -->
-    <header class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <header class="wrapper events-carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="zoom-in" data-aos-delay="200">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -129,8 +128,7 @@
 
     <section class="container justify-content-center">
         <br>
-        <h1 class="text-center">Events</h1>
-        <br>
+        <h1 class="text-center m-0 p-0">Events</h1>
         <div class="component-systemTabs">
             <div class="tabs-container">
                 <ul class="tabs"></ul>
@@ -141,20 +139,20 @@
                         </h1>
                     </div>
                 </div>
-                <div id="tab-2" data-tab-title="Past-Events" class="tab-content current justify-content-center">
-                    <div class="row my-2">
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border" src="media/images/events/Ennovate/Ennotate_01.jpeg"
+                <div id="tab-2" data-tab-title="Past-Events" class="tab-content current justify-content-center m-0 p-0">
+                    <div class="row py-1 text-center">
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/Ennovate/Ennotate_01.jpeg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Ennovate 2019</h5>
                                     <p class="card-text text-left">Absolute blend of Entrepreneurship, Innovation
                                         and Technology, where participants come together to innovate and mould their
                                         ideas to realistic solutions and progressive business plans.</p>
                                     <p class="card-text text-left"><strong>Date: </strong>05/05/2019</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal1">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal1">Know
                                         More</a>
                                 </div>
                             </div>
@@ -169,7 +167,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators1" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -216,7 +214,7 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center my-2">Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>Ennovate is an absolute blend of Entrepreneurship,
                                                 Innovation and
                                                 Technology, where students from every background can come together to
@@ -283,20 +281,20 @@
                         </div>
                         <!--End of Ennovate-->
                         <!--Wopreneur Speaker Session-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top"
                                     src="media/images/events/Posters 18-19/WomenInEnterprenuer.jpg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Women In Enterprenuer</h5>
                                     <p class="card-text">The session was conducted by Neha Chatterjee (Founder,
                                         Wopreneur) who is currently driving a community of 6000+ women entrepreneurs.
                                         Wopreneur is an organization to facilitate the growth of women.
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>29/01/2019 </p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal4">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal4">Know
                                         More</a>
                                 </div>
                             </div>
@@ -311,7 +309,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators14" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -358,7 +356,7 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>The session was conducted by Neha Chatterjee (Founder, Wopreneur) who is
                                                 currently driving a community of 6000+ women entrepreneurs
                                                 Wopreneur is an organization to facilitate the growth of women in their
@@ -376,10 +374,8 @@
                                                 the students like the limitations faced by women start-ups, ecosystem
                                                 required to help them realize their potential and so on.
                                             </p>
-                                            <hr>
                                             <p>
-                                                <b>Date of Event :- 29th January, 2019 <br></b>
-
+                                                <b>Date of Event :- 29th January, 2019</b>
                                             </p>
                                         </div>
                                         <div class="modal-footer">
@@ -391,12 +387,12 @@
                             </div>
                         </div>
                         <!--End of Wopreneur Speaker Session-->
-                         <!--Global BlockChain Hackathon-->
-                         <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
-                                    src="media/images/events/Posters 18-19/GlobalBlockChain.jpg" alt="Card image cap">
-                                <div class="card-body">
+                        <!--Global BlockChain Hackathon-->
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/Posters 18-19/GlobalBlockChain.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Global Blockchain Hackathon</h5>
                                     <p class="card-text text-left"> It was the ultimate event with an aim to provide a
                                         platform to
@@ -404,8 +400,8 @@
                                         innovations to help shape the future!
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>19/12/2018 - 22/12/2018</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal2">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal2">Know
                                         More</a>
                                 </div>
                             </div>
@@ -421,7 +417,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators2" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -468,7 +464,7 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>It was the ultimate event with an aim to provide a
                                                 platform to invite
                                                 solution creators and visionaries to explore technology and business
@@ -479,7 +475,6 @@
                                                     <br>
                                                     <br> Number of Participants: 41 teams from all over the country
                                                     participated in Global Blockchain Hackathon.
-
                                                     <br> Duration of Event: 19th, 21st and 22nd December 2018.
                                                     <br>
                                                     <hr> Specifics:
@@ -536,11 +531,11 @@
                                                     which Blockchain can be diversely implemented. He passed on a very
                                                     insightful message to our participants stating ‘Focus 99% on the
                                                     problem and you will get your solution.’
-                                                    <p>
-                                                        <b>Date of Event :- 19th - 22nd December 2019</b>
-                                                    </p>
-
                                                 </p>
+                                                <p>
+                                                    <b>Date of Event :- 19th - 22nd December 2019</b>
+                                                </p>
+                                            </p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-primary"
@@ -552,20 +547,21 @@
                         </div>
                         <!--End of GlobalBlockChain-->
                         <!--HackIot-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border" src="media/images/events/Posters 18-19/HackIOT.jpg"
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/Posters 18-19/HackIOT.jpg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Hack-IOT</h5>
-                                    <p class="card-text">Hack-IoT (Hackathon based on IoT) conducted by BloomBox,
+                                    <p class="card-text text-left">Hack-IoT (Hackathon based on IoT) conducted by
+                                        BloomBox,
                                         Entrepreneurship Cell KJSCE and RiiDL, the aim is to provide a platform to
                                         design and create innovative solutions that can directly impact millions of
                                         lives.
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>30/10/2018 - 6/11/2018 </p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal3">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal3">Know
                                         More</a>
                                 </div>
                             </div>
@@ -580,7 +576,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators3" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -627,7 +623,7 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>Hack-IoT (Hackathon based on IoT) conducted by
                                                 BloomBox, Entrepreneurship
                                                 Cell KJSCE and RiiDL, the aim is to provide a platform to design and
@@ -696,19 +692,19 @@
                         </div>
                         <!--End of HackIOT-->
                         <!--B-plan-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top"
                                     src="media/images/BloomBox, E-Cell KJSCE - RedBull Basement Program - Business Model Workshop.jpg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">B-Plan Workshop</h5>
                                     <p class="card-text text-left">BloomBox, E-Cell KJSCE in collaboration with E-Cell,
                                         SIMSR
                                         organized a B-plan workshop by the RedBull Basement University</p>
                                     <p class="card-text text-left"><strong>Date: </strong>13/10/2018 </p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal15">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal15">Know
                                         More</a>
                                 </div>
                             </div>
@@ -723,7 +719,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators15" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -767,15 +763,14 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>BloomBox, E-Cell KJSCE in collaboration with E-Cell,
                                                 SIMSR organized a
-                                                B-plan workshop by the RedBull Basement Universitys</p><br>
+                                                B-plan workshop by the RedBull Basement University</p>
                                             <p>The workshop was conducted by -<br> 1. Mr. Romil Shah
                                                 (A Business Analyst
                                                 and a Headstarter) <br> 2. Mr. Abhishek Barari (Head of Operations and
                                                 Finance, MycuteOffice)
-                                                <br>
                                             </p>
                                             <p>Mr. Romil Shah gave an overview of three waves of
                                                 Entrepreneurs. The
@@ -800,18 +795,18 @@
                         </div>
                         <!--End of B-Plan-->
                         <!--Speaker Session-->
-                        <div class="col-md-4 justify-content-center my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
-                                    src="media/images/BloomBox, E-Cell KJSCE - Panel Session.jpg" alt="Card image cap">
-                                <div class="card-body">
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/BloomBox, E-Cell KJSCE - Panel Session.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Entrepreneurship: The Long March of an Entrepreneur</h5>
                                     <p class="card-text text-left">Innovate Speaker Session on Enterprenuership given by
                                         various
                                         Entrepreneur Panel </p>
                                     <p class="card-text text-left"><strong>Date: </strong>23/08/2018</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal5">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal5">Know
                                         More</a>
                                 </div>
                             </div>
@@ -827,7 +822,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators5" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -874,7 +869,7 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>Nisarg Bavishi said passion and a drive to achieve
                                                 something is what they
                                                 look in individuals for their company. Mr. Puru Gupta spoke about how
@@ -919,11 +914,11 @@
                         </div>
                         <!--End of Speaker Session-->
                         <!--Gang Rush-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
-                                    src="media/images/events/Postets 17-18/Gangrush-03.jpeg" alt="Card image cap">
-                                <div class="card-body">
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/Postets 17-18/Gangrush-03.jpeg"
+                                    alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Gang Rush</h5>
                                     <p class="card-text text-left">Gang Rush was a fun event where BloomBox hosted few
                                         games highlighting important
@@ -931,8 +926,8 @@
                                         Alertness, etc.
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>13/04/2018</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal6">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal6">Know
                                         More</a>
                                 </div>
                             </div>
@@ -947,7 +942,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators6" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -994,15 +989,13 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>This was a fun event where BloomBox hosted few games
                                                 highlighting important
                                                 Entrepreneurship qualities like Teamwork, Time Management, Coordination,
                                                 Alertness, etc.
-                                            </p><br>
-                                            <p> This
-                                                event took place at Gargi Plaza Amphitheatre, Somaiya Vidyavihar.
-                                                <br>
+                                            </p>
+                                            <p> This event took place at Gargi Plaza Amphitheatre, Somaiya Vidyavihar.
                                             </p>
                                             <p>
                                                 <b>Date of Event :- 13 April 2018</b>
@@ -1018,19 +1011,19 @@
                         </div>
                         <!--End of Gang Rush-->
                         <!--GyaanBox-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border" src="media/images/events/GyaanBox/img1.jpg"
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/GyaanBox/img1.jpg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">GyaanBox</h5>
                                     <p class="card-text text-left">A two day workshop was conducted on 'Fundamentals of
                                         Coding and Dynamic
                                         Programming by a Third Year Computers student.
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>23/03/2018 - 24/03/2018</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal7">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal7">Know
                                         More</a>
                                 </div>
                             </div>
@@ -1045,7 +1038,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators7" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -1085,12 +1078,11 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>A two day workshop was conducted on 'Fundamentals of
                                                 Coding and Dynamic
                                                 Programming by a Third Year Computers student.
-
-                                            </p><br>
+                                            </p>
                                             <p> GyaanBox is a workshop conducted with an
                                                 aim to give some bright students a platform to spread their knowledge to
                                                 others acting as a
@@ -1111,20 +1103,20 @@
                         </div>
                         <!--End of GyaanBox-->
                         <!--Chefpreneur-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top"
                                     src="media/images/events/Postets 17-18/Chefpreneur poster-01.jpeg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Chefpreneur</h5>
                                     <p class="card-text text-left">BloomBox in association with KJSCE Symphony conducted
                                         Chefpreneur’s second version for the year during Symphony, annual cultural
                                         festival of KJSCE on 9th February, 2018
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>9/02/2018</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal8">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal8">Know
                                         More</a>
                                 </div>
                             </div>
@@ -1139,7 +1131,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators8" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -1186,7 +1178,7 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>BloomBox in association with KJSCE Symphony conducted
                                                 Chefpreneur’s second version for the year during Symphony, annual
                                                 cultural festival of KJSCE on 9th February, 2018.
@@ -1211,18 +1203,18 @@
                         </div>
                         <!--End of Chefpreneur-->
                         <!--Entrepreneurship Day 2018-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border" src="media/images/events/Entrepreneurship Day/img1.jpg"
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/Entrepreneurship Day/img1.jpg"
                                     alt="Card image cap">
-                                <div class="card-body">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Entrepreneurship Day</h5>
                                     <p class="card-text text-left">Entrepreneurship Day was conducted on 3rd February,
                                         2018 with an aim to enhance and expand the Entrepreneurship culture.
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>3/02/2018</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal9">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal9">Know
                                         More</a>
                                 </div>
                             </div>
@@ -1237,7 +1229,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators9" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -1284,17 +1276,17 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>Entrepreneurship Day was conducted on 3rd February,
                                                 2018 with an aim to enhance and expand the Entrepreneurship culture.
                                                 This event commenced with a speaker session by Mr. Angad Nadkarni who
-                                                spoke about Startup Planning
-                                            </p><br>
+                                                spoke about Startup Planning.
+                                            </p>
                                             <p> He enlightened the audience on the factors which
                                                 play a key role in Startup Planning. There was also a workshop conducted
                                                 by Seema Agarwal and Vijal Sejpal, co-founders of iThrive, on Leadership
                                                 and Communication. A simultaneous Career Counseling session was also
-                                                held during the day
+                                                held during the day.
                                                 <br>
                                             </p>
                                             <p>
@@ -1311,19 +1303,19 @@
                         </div>
                         <!--End of Entrepreneurship Day 2018 -->
                         <!--Why Don’t You Tube-->
-                        <div class="col-md-4 text my-2">
-                            <div class="card h-100 my-2">
-                                <img class="card-img-top border"
-                                    src="media/images/events/Postets 17-18/WDYT POSTER 2-01.jpeg" alt="Card image cap">
-                                <div class="card-body">
+                        <div class="col-md-4 text my-2 event-cards">
+                            <div class="card text-center my-2 h-100" data-aos="fade-up">
+                                <img class="card-img-top" src="media/images/events/Postets 17-18/WDYT POSTER 2-01.jpeg"
+                                    alt="Card image cap">
+                                <div class="card-body d-flex flex-column">
                                     <h5 class="card-title">Why Don’t You Tube</h5>
                                     <p class="card-text text-left">A Digital Marketing Event (or a Social Media
                                         Marketing Contest) was conducted during Abhiyantriki, annual technical festival
                                         of KJSCE.
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>07/10/2017</p>
-                                    <a href="#" classs="btn btn-primary text-left" data-toggle="modal"
-                                        data-target="#exampleModal10">Know
+                                    <a href="#" id="know-more-btn" classs="btn btn-primary text-left"
+                                        data-toggle="modal" data-target="#exampleModal10">Know
                                         More</a>
                                 </div>
                             </div>
@@ -1338,7 +1330,7 @@
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body text-left">
                                             <div id="carouselExampleIndicators10" class="carousel slide"
                                                 data-ride="carousel">
                                                 <ol class="carousel-indicators">
@@ -1385,20 +1377,19 @@
                                                     <span class="sr-only">Next</span>
                                                 </a>
                                             </div>
-                                            <h4 class="text-center"> Details About the Event</h4>
+                                            <h4 class="text-center my-3">Details About the Event</h4>
                                             <p>A Digital Marketing Event (or a Social Media
                                                 Marketing Contest) was conducted during Abhiyantriki, annual technical
                                                 festival of KJSCE. Participants had to upload a video on any social
                                                 media platform possible, and to win this competition, they were required
                                                 to digitally market the video.
-                                            </p><br>
+                                            </p>
                                             <p> There was an interactive Question and Answer session
                                                 taken by a famous Spoken Word Poet, Mr. Yahya Bootwala who entertained
                                                 all the questions asked by the audience. Also, There was a speaker
                                                 session by Mr. Chirag Warty who shared his expertise on Digital
                                                 Marketing. The winning team was announced during our event
                                                 ‘Entrepreneurship Day 2018’
-                                                <br>
                                             </p>
                                             <p>
                                                 <b>Date of Event :- 7th October 2017</b>
@@ -1496,14 +1487,20 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous ">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js "
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous ">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
-    </script>
+        </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Animation on Scroll JS -->
+    <script src="scripts/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
