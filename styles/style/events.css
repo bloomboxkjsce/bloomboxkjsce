@@ -1,22 +1,48 @@
-.card-img-top
-{
+.card-img-top {
   height: 200px;
 }
-.btn btn-primary
-{
+
+.btn .btn-primary {
   position: absolute;
-  bottom: 0%;
-  
+  bottom: 0;
+}
+
+.card-body a {
+  bottom: 0;
+}
+
+.wrapper {
+  margin: 5px 1%;
+}
+
+.events-carousel .carousel-inner {
+  border-radius: 5px;
+  box-shadow: 0px 5px 12px -10px black;
 }
 
 .card {
-  width:100%;
+  width: 100%;
 }
+
+.event-cards {
+  margin-bottom: 20px !important;
+}
+
+.event-cards .card {
+  border: none;
+  /* border-radius: 7px; */
+  box-shadow: 0px 10px 20px -10px black;
+}
+
+/* .event-cards .card-img-top {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+} */
 
 .containerTitles {
   width: 100%;
   text-align: center;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .containerTitles h1 {
@@ -29,11 +55,13 @@
 
 .component-systemTabs {
   width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
 .component-systemTabs .tabs-container {
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
 }
 
@@ -151,4 +179,25 @@
 
 .component-systemTabs .cards .card .cardContent:hover button {
   opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    margin:5% 5px 0 5px;
+  }
+  .events-carousel .carousel-inner {
+    border-radius:5px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .events-carousel .carousel-inner {
+    border-radius:3px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+}
+
+@media only screen and (max-width: 240px) {
 }

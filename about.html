@@ -37,6 +37,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <!-- Animation on Scroll CSS -->
+    <link href="styles/aos.css" rel="stylesheet">
+
     <!-- About CSS-->
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/style/footer.css" />
@@ -85,7 +88,7 @@
 
     <div class="navigation-padding"></div>
 
-    <div class="container" id="aboutus">
+    <div class="container" id="aboutus" data-aos="fade-up">
         <div class="text-center h1 font-weight-normal section-title mb-4" style="margin-top:1.75rem;">
             About Us
         </div>
@@ -140,7 +143,7 @@
         <hr class="bg-dark">
     </div>
 
-    <div class="container demo" id="FAQ">
+    <div class="container demo" id="FAQ" data-aos="fade-up" data-aos-delay="300">
         <div class="text-center h1 font-weight-normal section-title mb-4">
             Frequently Asked Questions ?
         </div>
@@ -238,7 +241,7 @@
         <hr class="bg-dark">
     </div>
 
-    <div class="container" id="contact">
+    <div class="container" id="contact" data-aos="fade-up">
         <section class="section pb-5">
             <div class="text-center h1 font-weight-normal section-title mb-3">
                 Contact Us
@@ -365,6 +368,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
         </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Animation on Scroll JS -->
+    <script src="scripts/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 

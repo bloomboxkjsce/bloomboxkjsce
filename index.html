@@ -37,11 +37,18 @@
 
     <!-- Home page CSS-->
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/aos.css" />
     <link rel="stylesheet" href="./styles/style/footer.css" />
     <link rel="stylesheet" href="./styles/style/homepage.css" />
     <link rel="stylesheet" href="./styles/style/navigation.css" />
 
     <!-- Other CSS -->
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+    <!-- Animation on Scroll CSS -->
+    <link href="styles/aos.css" rel="stylesheet">
 
 
 </head>
@@ -87,7 +94,23 @@
 
         <!-- Full Page Image Header with Vertically Centered Content Start -->
         <div class="overlay"></div>
-        <img src="media/images/home/home-background-5.jpeg" class="landing-image" style="height:100%;width:auto;">
+        <div class="background">
+            <!-- <img src="media/images/home/home-background-5.jpeg" class="landing-image" style="height:100%;width:auto;"> -->
+            <!-- <img src="media/images/home/home-background-1.jpg" class="landing-image" style="height:100%;width:auto;"> -->
+            <img id="image" src="./media/images/home/home-background-5.jpeg" class="landing-image" style="height:100%;width:auto;">
+            <script>
+                var imageSources = ["./media/images/home/home-background-5.jpeg"]
+
+                var index = 0;
+                setInterval(function () {
+                    if (index === imageSources.length) {
+                        index = 0;
+                    }
+                    document.getElementById("image").src = imageSources[index];
+                    index++;
+                }, 2500);
+            </script>
+        </div>
         <div class="container h-100">
             <div class="d-flex text-center align-items-center row landing-content">
                 <div class="w-100"><br></div>
@@ -95,19 +118,21 @@
                     <br>
                     <br>
                     <br>
-                    <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif" class="text-insde">BloomBox&#44;
-                        Entrepreneurship Cell
-                    </h2>
-                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif" class="text-insde">K. J. Somaiya College
-                        of Engineering </h3>
                     <br>
-                    <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif" class="text-insde">Your potential, Our
+                    <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif" class="text-insde" data-aos="fade-up">
+                        BloomBox&#44; Entrepreneurship Cell
+                    </h2>
+                    <br>
+                    <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif" class="text-insde" data-aos="fade-up"
+                        data-aos-delay="500">K. J. Somaiya College of Engineering </h3>
+                    <br>
+                    <!-- <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif" class="text-insde">Your potential, Our
                         passion
                     </h2>
-                    <br>
-                    <br>
+                    <br> -->
+                    <!-- <br> -->
                 </div>
-                <a href="#initiatives" id="godown-button"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+                <a href="#initiatives" id="godown-button" data-aos="fade-down" data-aos-delay="1000"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
             </div>
         </div>
 
@@ -124,40 +149,37 @@
         <br>
         <br>
         <h1 class="text-center">Initiatives</h1>
-        <div class="row py-1 text-center justify-content-center">
-            <div class="col-sm-3 my-2 text-center">
+        <div class="row py-1 text-center justify-content-center home-initiatives">
+            <div class="col-sm-4 my-2 text-center" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card text-center py-2 h-100 home-card-initiatives">
-                    <img class="card-img-top" src="media/images/home/Startup Talks.jpeg"
-                        alt="Startup Talks">
+                    <img class="card-img-top" src="media/images/home/Startup Talks.jpeg" alt="Startup Talks">
                     <h4 class="py-2 px-2">Startup Talks</h4>
                 </div>
             </div>
-            <div class="col-sm-3 my-2 text-center">
+            <div class="col-sm-4 my-2 text-center" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card text-center py-2 h-100 home-card-initiatives">
-                    <img class="card-img-top" src="media/images/home/Campus Company.jpeg"
-                        alt="Campus Company">
+                    <img class="card-img-top" src="media/images/home/Campus Company.jpeg" alt="Campus Company">
                     <h4 class="py-2 px-2">Campus Company</h4>
                 </div>
             </div>
-            <div class="col-sm-3 my-2 text-center">
+            <div class="col-sm-4 my-2 text-center" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card text-center py-1 h-100 home-card-initiatives">
-                    <img class="card-img-top" src="media/images/home/Hackathon.jpeg"
-                        alt="Tech-Business Hackathon">
+                    <img class="card-img-top" src="media/images/home/Hackathon.jpeg" alt="Tech-Business Hackathon">
                     <h4 class="py-2 px-2">Tech-Business Hackathon</h4>
                 </div>
             </div>
-            <br>
-            <div class="col-sm-3 my-2 text-center">
+        </div>
+        <div class="row py-1 text-center justify-content-center">
+            <div class="col-sm-4 my-2 text-center" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card text-center py-2 h-100 home-card-initiatives">
                     <img class="card-img-top" src="media/images/home/Startup Industry Visits.jpeg"
                         alt="Startup Industry Visit">
                     <h4 class="py-2 px-2">Startup Industry Visit</h4>
                 </div>
             </div>
-            <div class="col-sm-3 my-2 text-center">
+            <div class="col-sm-4 my-2 text-center" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card text-center py-2 h-100 home-card-initiatives">
-                    <img class="card-img-top" src="media/images/home/Startup Workshop.jpeg"
-                        alt="Hands on Events">
+                    <img class="card-img-top" src="media/images/home/Startup Workshop.jpeg" alt="Hands on Events">
                     <h4 class="py-2 px-2">Hands-on Events &amp; Startup Workshops</h4>
                 </div>
             </div>
@@ -174,6 +196,37 @@
         <div class="container home-events text-center py-4" id="events">
             <h1 class="text-center">Event Highlights</h1>
             <div class="container">
+                <style>
+                    .owl-carousel {
+                        height: 250px;
+                    }
+                </style>
+                <div class="owl-carousel">
+                    <div class="owl" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="img m-1">
+                            <img class="img-fluid mx-auto d-block" src="media/images/events/B-Plan/img1.jpg"
+                                alt="slide 1">
+                        </div>
+                        <div class="img m-1">
+                            <img class="img-fluid mx-auto d-block" src="media/images/events/Ennovate/Ennovate_02.jpeg"
+                                alt="slide 2">
+                        </div>
+                        <div class="img m-1">
+                            <img class="img-fluid mx-auto d-block" src="media/images/events/HackIoT/img1.jpg"
+                                alt="slide 3">
+                        </div>
+                        <div class="img m-1"> <img class="img-fluid mx-auto d-block"
+                                src="media/images/events/Speaker Session/Aditya Save/IMG_20190828_174711.jpg"
+                                alt="slide 4"></div>
+                        <div class="img m-1">
+                            <img class="img-fluid mx-auto d-block"
+                                src="media/images/events/Speaker Session/Long March to Enterprenuership/img1.jpg"
+                                alt="slide 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container">
                 <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel"
                     data-interval="false">
                     <div class="carousel-inner row w-100 mx-auto" role="listbox">
@@ -264,7 +317,7 @@
                     </a>
                 </div>
             </div>
-            <br>
+            <br> -->
         </div>
         <div class="text-center">
             <a href="events.html" target="_blank"><button type="button" class="btn btn-primary btn-sm text-center py-1"
@@ -281,21 +334,21 @@
     <div class="container home-campuscompany py-3 text-center" id="campuscompany">
         <h1 class="text-center">Campus Company</h1>
         <div class="row py-1 justify-content-center">
-            <div class="col-sm-3 py-1">
+            <div class="col-sm-4 py-1" data-aos="fade-right" data-aos-delay="100">
                 <div class="card text-center py-1 h-100">
                     <img class="card-img-top" src="media/images/campus-company/cc-logos/Branding Catalyst.jpeg"
                         alt="Branding Catalyst - Designing and Printing">
                     <h4 class="py-1">Branding Catalyst</h4>
                 </div>
             </div>
-            <div class="col-sm-3 py-1">
+            <div class="col-sm-4 py-1" data-aos="zoom-in" data-aos-delay="100">
                 <div class="card text-center py-1 h-100">
                     <img class="card-img-top" src="media/images/campus-company/cc-logos/G3.jpg"
                         alt="Generations Going Green">
                     <h4 class="py-1">Generations Going Green</h4>
                 </div>
             </div>
-            <div class="col-sm-3 py-1">
+            <div class="col-sm-4 py-1" data-aos="fade-left" data-aos-delay="100">
                 <div class="card text-center py-1 h-100">
                     <img class="card-img-top" src="media/images/campus-company/cc-logos/Nurturing Lives.jpg"
                         alt="Nurturing Lives">
@@ -319,25 +372,24 @@
     <!-- Social Media Plugins Start -->
     <div class="container py-2" id="social-media">
         <h2 class="text-center">Social Media Updates</h2>
-        <div class="row">
-            <div class="col-sm-6 text-primary py-1 px-1 text-center" id="facebook-homepage">
+        <div class="row justify-content-center">
+            <div class="col-sm-5 text-primary my-1 mx-1 text-center" id="facebook-homepage" data-aos="zoom-out">
                 <h5 class="py-1">Facebook</h5>
                 <div id="fb-root"></div>
                 <script async defer crossorigin="anonymous"
                     src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
                 <div class="fb-page" data-href="https://www.facebook.com/bloombox.kjsce" data-tabs="timeline"
-                    data-width="" data-height="" data-small-header="true" data-adapt-container-width="true"
-                    data-hide-cover="true" data-show-facepile="true" data-chrome="transparent noscrollbar"
-                    style="width:100%;">
+                    data-width="" data-height="500" data-small-header="true" data-adapt-container-width="true"
+                    data-hide-cover="true" data-show-facepile="true" data-chrome="transparent">
                     <blockquote cite="https://www.facebook.com/bloombox.kjsce" class="fb-xfbml-parse-ignore"><a
                             href="https://www.facebook.com/bloombox.kjsce">BloomBox, E-Cell KJSCE</a></blockquote>
                 </div>
             </div>
-            <div class="col-sm-6 text-primary py-1 px-1 text-center" id="twitter-homepage">
+            <div class="col-sm-5 text-primary my-1 mx-1 text-center" id="twitter-homepage" data-aos="zoom-out">
                 <h5 class="py-1">Twitter</h5>
                 <a class="twitter-timeline" target="_blank" href="https://twitter.com/bloombox_kjsce"
-                    data-widget-id="673755081871745024" data-screen-name="BloomBox, E-Cell KJSCE" data-height="550"
-                    data-chrome="transparent">Tweets by
+                    data-widget-id="673755081871745024" data-screen-name="BloomBox, E-Cell KJSCE" data-height="500"
+                    data-chrome="transparent nofooter">Tweets by
                     @bloombox_kjsce</a>
                 <script>
                     ! function (d, s, id) {
@@ -420,6 +472,12 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- Animation on Scroll JS -->
+    <script src="scripts/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <!-- Other JavaScript -->
     <script src="./scripts/script/go-top-arrow.js"></script>
     <script src="https://kit.fontawesome.com/be4c1851d0.js"></script>
@@ -435,6 +493,11 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous ">
         </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="./scripts/owl.carousel.js"></script>
+    <script src="./scripts/owl.carousel.min.js"></script>
+    <script src="./scripts/script/homepage.js"></script>
 
 </body>
 

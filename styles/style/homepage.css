@@ -28,6 +28,7 @@ body {
   bottom: 50;
   text-align: center;
   font-size: 200%;
+  text-shadow: 0 0 10px black;
   color: white;
   border: none;
   outline: none;
@@ -101,6 +102,7 @@ header .overlay {
 
 #godown-button:hover {
   color: blue;
+  text-shadow: 0 0 20px black;
 }
 
 .masthead {
@@ -110,7 +112,11 @@ header .overlay {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(70%);
+  filter: brightness(100%);
+}
+
+.text-inside-landingpage h2,h3{
+  text-shadow: 0 0 20px black;
 }
 
 .btn {
@@ -126,6 +132,18 @@ hr {
   height: 100%;
 }
 
+.home-initiatives .card {
+  box-shadow: 0px 10px 20px -15px black;
+}
+
+#campuscompany .card {
+  box-shadow: 0px 10px 20px -15px black;
+}
+
+#campuscompany img {
+  padding: 10%;
+}
+
 .home-card-initiatives img {
   width: 70%;
   margin-left: 15%;
@@ -136,11 +154,34 @@ hr {
   height: 200px;
   width: 300px;
   object-fit: cover;
-  filter: brightness(60%);
+  /* filter: brightness(60%); */
+}
+
+.owl-nav {
+  text-align: center;
+  font-size: 250%;
+}
+
+.owl-nav span {
+  justify-content: center;
+  align-content: center;
+  margin: 0 20px;
+}
+
+.owl-stage {
+  height: 200px;
+}
+
+.owl-stage-outer {
+  height: 100%;
 }
 
 .logo-a {
   color: inherit;
+}
+
+#twitter-homepage > footer {
+    visibility: hidden!important;
 }
 
 .text-inside {

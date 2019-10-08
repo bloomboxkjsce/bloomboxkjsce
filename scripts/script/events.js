@@ -1,6 +1,6 @@
 $('.carousel').carousel({
-    interval: 200
-})
+    interval: 100
+});
 
 $(document).ready(function() {
     $(".tab-content").each(function(i) {
