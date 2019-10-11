@@ -11,7 +11,7 @@
   bottom: 0;
 }
 
-.container-fluid {
+.wrapper {
   margin: 5px 1%;
 }
 
@@ -182,7 +182,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .container-fluid {
+  .wrapper {
     margin:5% 5px 0 5px;
   }
   .events-carousel .carousel-inner {
