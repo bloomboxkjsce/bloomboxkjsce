@@ -12,7 +12,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #276bc4;
+  background: #0C43BF;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -68,7 +68,7 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: #0033cc;
+  color: #0C43BF;
 }
 
 .navbar-light .navbar-nav .nav-link.active:hover {
