@@ -44,10 +44,17 @@
     <link rel="stylesheet" href="./styles/style/footer.css" />
     <link rel="stylesheet" href="./styles/style/sponsors-card.css" />
     <link rel="stylesheet" href="./styles/style/navigation.css" />
+    <link rel="stylesheet" href="./styles/style/preloader.css" />
 
 </head>
 
-<body>
+<body onload="preloader();">
+
+    <div class="wrapper" id="loader" style="height:100vh;width:100%;">
+        <span class="loader">
+            <img src="./media/images/BloomBox, E-Cell KJSCE - Logo Small.png" />
+        </span>
+    </div>
 
     <!-- Navigation Bar Start -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -368,6 +375,9 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- Preloader -->
+    <script src="./scripts/script/preloader.js"></script>
 
 </body>
 

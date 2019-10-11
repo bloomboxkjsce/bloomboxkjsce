@@ -43,13 +43,20 @@
     <link rel="stylesheet" href="./styles/style/navigation.css" />
     <link rel="stylesheet" href="./styles/style/events.css" />
     <link rel="stylesheet" href="./styles/style/footer.css" />
+    <link rel="stylesheet" href="./styles/style/preloader.css" />
 
     <!-- Animation on Scroll CSS -->
     <link href="styles/aos.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body onload="preloader();">
+
+    <div class="wrapper" id="loader" style="height:100vh;width:100%;">
+        <span class="loader">
+            <img src="./media/images/BloomBox, E-Cell KJSCE - Logo Small.png" />
+        </span>
+    </div>
 
     <!-- Navigation Bar Start -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -90,7 +97,7 @@
     <div class="navigation-padding"></div>
 
     <!-- Full Page Image Header with Vertically Centered Content Start -->
-    <header class="wrapper events-carousel">
+    <header class="container-fluid events-carousel">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-aos="zoom-in"
             data-aos-delay="200">
             <ol class="carousel-indicators">
@@ -229,8 +236,15 @@
                                                 know its worth’. Participants are asked to build a prototype of website/
                                                 web application demonstrating the use of any technology and provide
                                                 innovative solutions for real-world problems through their prototype.
-                                                A long with the prototype, the teams are also asked to provide a business
+                                                Along with the prototype, the teams are also asked to provide a business
                                                 plan for their prototype.</p>
+                                            <p>Gaurang Shetty has been part of the startup ecosystem
+                                                through RiiDL for
+                                                some time now and he said that the students were fortunate enough to be
+                                                in a campus where they have an incubator inside the campus so they
+                                                can spend some time and learn, shadow there and see how their lives are
+                                                like.</p>
+                                            <p>
                                                 <b>Statisitcs</b><br>
                                                 <b>1. </b>Prize Money: 1st place – Rs. 7000 + Goodies.<br>
                                                 2nd place – Rs. 5000<br> 3rd place – Rs. 1500 + Goodies.<br>
@@ -282,7 +296,7 @@
                                     src="media/images/events/Posters 18-19/WomenInEnterprenuer.jpg"
                                     alt="Card image cap">
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title align-self-start w-100">Interactive Session on Women in Entrepreneurship</h5>
+                                    <h5 class="card-title align-self-start w-100">Women In Enterprenuer</h5>
                                     <p class="card-text text-left">The session was conducted by Neha Chatterjee
                                         (Founder,
                                         Wopreneur) who is currently driving a community of 6000+ women entrepreneurs.
@@ -301,7 +315,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel14">Wopreneur</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel14">Women In Enterprenuer</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
@@ -634,7 +648,8 @@
                                                 Facility (RiiDL)<br> 3.FabLab (RiiDL) membership worth INR 6,000 <br>
                                                 4.Two Months Internship Opportunity at VPS Techub Private Limited
                                                 <br> 5.Goodies & Gift Voucher from Facebook Developer Circle, Pizza Hut
-                                                and many more.
+                                                and many more
+                                                <br> Round 1 (Elimination Round) : 5th April 2019<br>
                                             </p>
                                             <hr>
                                             <p>
@@ -871,18 +886,9 @@
                                                 </a>
                                             </div>
                                             <h4 class="text-center my-3">Details About the Event</h4>
-                                            <p>
-                                                <b>Panelist</b><br> 1. Dr. Dhaval Shah (Co-Founder, Pharmeasy).<br> 2.
-                                                Mr. Tushar Saxena (Co-Founder and CTO, Flyrobe).<br> 3. Mr. Gaurang
-                                                Shetty (Chief Innovation Catalyst, riidl).<br> 4. Mr. Puru Gupta
-                                                (Co-Founder and CEO, True Elements).<br> 5. Mr. Nisarg Bavishi (Leads
-                                                Operations and Client Solutions at vPhrase Analytics Solution Pvt.
-                                                Ltd.)<br> Moderator: Mrs. Hetal Mundra (Founder, BloomBox,E-Cell KJSCE
-                                                and Community Architect, riidl).<br>
-                                            </p>
                                             <p>Nisarg Bavishi said passion and a drive to achieve
                                                 something is what they
-                                                look in individuals for their company.</p><p>Mr. Puru Gupta spoke about how
+                                                look in individuals for their company. Mr. Puru Gupta spoke about how
                                                 startups are dynamic, how they keep changing and that, change is
                                                 good in this field. He talked about the challenges they faced in the
                                                 last few years in True Elements
@@ -890,7 +896,7 @@
                                             <p>Tushar Saxena talked about the archetype of his
                                                 biggest target market and
                                                 the latent demand he is experiencing in this new era of online rentals
-                                                and fashion.</p><p>Dr. Dhaval Shah engaged the audience by sharing his
+                                                and fashion. Dr. Dhaval Shah engaged the audience by sharing his
                                                 struggles on restrictions and regulations for pharma companies in India
                                                 and his journey right from college to developing his interest in
                                                 startups</p>
@@ -900,6 +906,15 @@
                                                 in a campus where they have an incubator inside the campus so they
                                                 can spend some time and learn, shadow there and see how their lives are
                                                 like.</p>
+                                            <p>
+                                                <b>Panelist</b><br> 1. Dr. Dhaval Shah (Co-Founder, Pharmeasy).<br> 2.
+                                                Mr. Tushar Saxena (Co-Founder and CTO, Flyrobe).<br> 3. Mr. Gaurang
+                                                Shetty (Chief Innovation Catalyst, riidl).<br> 4. Mr. Puru Gupta
+                                                (Co-Founder and CEO, True Elements).<br> 5. Mr. Nisarg Bavishi (Leads
+                                                Operations and Client Solutions at vPhrase Analytics Solution Pvt.
+                                                Ltd.)<br> Moderator: Mrs. Hetal Mundra (Founder, BloomBox,E-Cell KJSCE
+                                                and Community Architect, riidl).<br>
+                                            </p>
                                             <p>
                                                 <b>Date of Event :- 23rd August 2018</b>
 
@@ -1112,10 +1127,10 @@
                                     src="media/images/events/Postets 17-18/Chefpreneur poster-01.jpeg"
                                     alt="Card image cap">
                                 <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title align-self-start w-100">Chefpreneur '19</h5>
+                                    <h5 class="card-title align-self-start w-100">Chefpreneur</h5>
                                     <p class="card-text text-left">BloomBox in association with KJSCE Symphony conducted
                                         Chefpreneur’s second version for the year during Symphony, annual cultural
-                                        festival of KJSCE on 9th February, 2018.
+                                        festival of KJSCE on 9th February, 2018
                                     </p>
                                     <p class="card-text text-left"><strong>Date: </strong>9/02/2018</p>
                                     <div class="modal-footer justify-content-center align-self-end mt-auto w-100"><a
@@ -1507,6 +1522,9 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- Preloader -->
+    <script src="./scripts/script/preloader.js"></script>
 
 </body>
 

@@ -47,10 +47,17 @@
     <link rel="stylesheet" href="./styles/style/teams.css" />
     <link rel="stylesheet" href="./styles/style/navigation.css" />
     <link rel="stylesheet" href="./styles/style/tables.css">
+    <link rel="stylesheet" href="./styles/style/preloader.css" />
 
 </head>
 
-<body>
+<body onload="preloader();">
+
+    <div class="wrapper" id="loader" style="height:100vh;width:100%;">
+        <span class="loader">
+            <img src="./media/images/BloomBox, E-Cell KJSCE - Logo Small.png" />
+        </span>
+    </div>
 
     <!-- Navigation Bar Start -->
     <nav class="navbar navbar-expand-lg p-1 navbar-light bg-light fixed-top">
@@ -217,10 +224,12 @@
                                                 <div class="social">
                                                     <ul>
                                                         <li class="linkedin">
-                                                            <a href="https://www.linkedin.com/in/baijudodhia/"><i class="fab fa-linkedin-in"></i></a>
+                                                            <a href="https://www.linkedin.com/in/baijudodhia/"><i
+                                                                    class="fab fa-linkedin-in"></i></a>
                                                         </li>
                                                         <li class="facebook">
-                                                            <a href="https://www.facebook.com/baijudodhia/"><i class="fab fa-facebook"></i></a>
+                                                            <a href="https://www.facebook.com/baijudodhia/"><i
+                                                                    class="fab fa-facebook"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1019,10 +1028,12 @@
                                                 <div class="social">
                                                     <ul>
                                                         <li class="linkedin">
-                                                            <a href="https://www.linkedin.com/in/baijudodhia/"><i class="fab fa-linkedin-in"></i></a>
+                                                            <a href="https://www.linkedin.com/in/baijudodhia/"><i
+                                                                    class="fab fa-linkedin-in"></i></a>
                                                         </li>
                                                         <li class="facebook">
-                                                            <a href="https://www.facebook.com/baijudodhia/"><i class="fab fa-facebook"></i></a>
+                                                            <a href="https://www.facebook.com/baijudodhia/"><i
+                                                                    class="fab fa-facebook"></i></a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -4285,6 +4296,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./scripts/aos.js"></script>
     <script src="./scripts/script/teams.js"></script>
+
+    <!-- Preloader -->
+    <script src="./scripts/script/preloader.js"></script>
 
 </body>
 

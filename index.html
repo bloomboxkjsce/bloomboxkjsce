@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="./styles/style/footer.css" />
     <link rel="stylesheet" href="./styles/style/homepage.css" />
     <link rel="stylesheet" href="./styles/style/navigation.css" />
+    <link rel="stylesheet" href="./styles/style/preloader.css" />
 
     <!-- Other CSS -->
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
@@ -49,10 +50,15 @@
     <!-- Animation on Scroll CSS -->
     <link href="styles/aos.css" rel="stylesheet">
 
-
 </head>
 
-<body>
+<body onload="preloader();">
+
+    <div class="wrapper" id="loader" style="height:100vh;width:100%;">
+        <span class="loader">
+            <img src="./media/images/BloomBox, E-Cell KJSCE - Logo Small.png" />
+        </span>
+    </div>
 
     <!-- Navigation Bar Start -->
     <header>
@@ -499,6 +505,9 @@
     <script src="./scripts/owl.carousel.js"></script>
     <script src="./scripts/owl.carousel.min.js"></script>
     <script src="./scripts/script/homepage.js"></script>
+
+    <!-- Preloader -->
+    <script src="./scripts/script/preloader.js"></script>
 
 </body>
 
