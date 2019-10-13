@@ -15,6 +15,10 @@
   margin: 5px 1%;
 }
 
+.events-carousel {
+  margin: 5px 1%;
+}
+
 .events-carousel .carousel-inner {
   border-radius: 5px;
   box-shadow: 0px 5px 12px -10px black;
@@ -184,6 +188,9 @@
 @media only screen and (max-width: 600px) {
   .wrapper {
     margin:5% 5px 0 5px;
+  }
+  .events-carousel {
+    margin: 5% 5px 0 5px;
   }
   .events-carousel .carousel-inner {
     border-radius:5px;
