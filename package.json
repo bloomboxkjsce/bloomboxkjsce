@@ -1,0 +1,38 @@
+{
+  "name": "bloomboxkjsce",
+  "version": "1.0.0",
+  "description": "all css files added link all the css for any page to be added",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm i",
+    "build": "webpack",
+    "start": "webpack-dev-server --output-public-path=/distBabel/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloomboxkjsce/bloomboxkjsce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bloomboxkjsce/bloomboxkjsce/issues"
+  },
+  "homepage": "https://github.com/bloomboxkjsce/bloomboxkjsce#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "firebase": "^7.2.0",
+    "validator": "^11.1.0"
+  }
+}
