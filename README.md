@@ -24,3 +24,8 @@ Website Demo::
     
     
    
+Webpack Bundle and all Assests added:
+
+   
+    Server initialized on production using webpack 
+    
