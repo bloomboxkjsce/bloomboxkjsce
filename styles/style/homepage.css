@@ -139,7 +139,10 @@ hr {
 #campuscompany .card {
   box-shadow: 0px 10px 20px -15px black;
 }
-
+#facultydetils .card{
+  box-shadow: 0px 10px 20px -15px black;
+  padding: 2%;
+}
 #campuscompany img {
   padding: 10%;
 }
