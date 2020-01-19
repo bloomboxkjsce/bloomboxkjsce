@@ -6,6 +6,7 @@ const externals = require("webpack-node-externals");
 const Uglify = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -18,15 +19,15 @@ module.exports = {
   },
   target: "web",
   devtool: "source-map",
-  // optimization: {
-  //   minimizer: [
-  //     new Uglify({
-  //       cache: true,
-  //       parallel: true,
-  //       sorceMap: true
-  //     })
-  //   ]
-  // },
+  optimization: {
+    minimizer: [
+      new Uglify({
+        cache: true,
+        parallel: true,
+        sorceMap: true
+      })
+    ]
+  },
   module: {
     rules: [
       {
@@ -35,8 +36,6 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        // Loads the javacript into html template provided.
-        // Entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
         use: [
           {
@@ -47,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(png|svg|jpg|gif|jpeg)$/,
@@ -57,8 +56,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      template: "./src/html/404Error.html",
+      template: "./src/html/about.html",
+      template: "./src/html/campus-company.html",
+      template: "./src/html/events.html",
       template: "./src/html/index.html",
+      template: "./src/html/partners.html",
+      template: "./src/html/team.html",
+      // bundled file names
+      filename: "./404Error.html",
+      filename: "./about.html",
+      filename: "./campus-company.html",
+      filename: "./events.html",
       filename: "./index.html",
+      filename: "./partners.html",
+      filename: "./team.html",
       excludeChunks: ["server"]
     }),
     new MiniCssExtractPlugin({
