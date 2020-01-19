@@ -1,0 +1,97 @@
+.jumbotron {
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 32px 32px;
+}
+
+.partners-main {
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.sponsor-partner {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.partners-column {
+    display: flex;
+}
+
+.partners-card {
+    background-color: white;
+    max-width: 240px;
+    max-height: auto;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0.5px 0.5px 5px 0.5px #D8CDF2;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px 10px;
+}
+
+.partners-card:hover {
+    box-shadow: 0.5px 0.5px 5px 2px #C1B8D8;
+}
+
+.partners-logo {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.partners-logo img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 7.5px;
+}
+
+.partners-title {
+    margin: 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .sponsor {
+        width: 100%;
+        height: auto;
+    }
+    .partners-logo {
+        width: 100%;
+        height: auto;
+    }
+    .partners-card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (max-width: 750px) {
+    .sponsor-partner {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .partners-column {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+}

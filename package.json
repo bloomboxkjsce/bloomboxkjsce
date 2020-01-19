@@ -1,38 +1,44 @@
 {
-  "name": "bloomboxkjsce",
+  "name": "expres",
   "version": "1.0.0",
-  "description": "all css files added link all the css for any page to be added",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "npm i",
-    "build": "webpack",
-    "start": "webpack-dev-server --output-public-path=/distBabel/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bloomboxkjsce/bloomboxkjsce.git"
+    "config": "nodemon .dist/server.js",
+    "build": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development",
+    "production": "rm -rf dist && webpack --mode production --config webpack.server.config.js && webpack --mode production",
+    "built": "node ./dist/server.js",
+    "start": "nodemon ./dist/server.js",
+    "webpack": "concurrently \"npm run development\" \"npm run start\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Annonymus",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bloomboxkjsce/bloomboxkjsce/issues"
-  },
-  "homepage": "https://github.com/bloomboxkjsce/bloomboxkjsce#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
-  },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "firebase": "^7.2.0",
-    "validator": "^11.1.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^5.0.2",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^2.0.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "raw-loader": "^4.0.0",
+    "style-loader": "^1.1.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }

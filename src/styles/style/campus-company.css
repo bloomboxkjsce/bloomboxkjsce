@@ -1,0 +1,24 @@
+.masthead {
+  min-height: 80vh;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.p-4 {
+  padding: 0 5% !important;
+}
+
+#cc-details .card {
+  border-radius:5px;
+  box-shadow: 0px 12px 20px -15px black;
+}
+
+#cc-details .col-sm-4 {
+  margin: 0 0 10px 0;
+}
+
+#cc-title {
+  text-shadow: 0 0 50px black;
+}

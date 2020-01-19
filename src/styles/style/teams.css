@@ -1,0 +1,193 @@
+body {
+    background-color: rgba(255, 255, 255);
+}
+
+.jumbotron {
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 32px 32px;
+}
+
+.p-1 {
+    padding: 0.45rem 0.9rem !important;
+}
+
+section {
+    padding: 0;
+}
+
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #eeeeee;
+}
+
+.panel-default>.panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+    background-color: #fafafa;
+    border-color: #eeeeee;
+}
+
+.panel-title {
+    font-size: 14px;
+}
+
+.panel-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.panel-title>a {
+    display: block;
+    padding: 8px;
+    color: #212121;
+    text-decoration: none;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #eeeeee;
+}
+
+.containerTitles {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.containerTitles h1 {
+    letter-spacing: 1px;
+}
+
+.containerTitles h2 {
+    font-weight: normal;
+}
+
+.component-systemTabs {
+    width: 100%;
+    display: flex;
+}
+
+.component-systemTabs .tabs-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.component-systemTabs .tabs-container ul.tabs {
+    margin: 0 0 15px 0;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.component-systemTabs .tabs-container ul.tabs li {
+    background: none;
+    color: rgba(90, 90, 90, 1);
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+
+.component-systemTabs .tabs-container ul.tabs li:hover {
+    color: rgba(1, 75, 140, 1);
+}
+
+.component-systemTabs .tabs-container ul.tabs li.current {
+    color: rgba(1, 75, 140, 1);
+    border-bottom: 2px solid rgba(1, 75, 140, 1);
+    transition: all 0.5s ease;
+}
+
+.component-systemTabs .tab-content {
+    display: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.component-systemTabs .tab-content.current {
+    display: block;
+}
+
+.component-systemTabs .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.component-systemTabs .cards .card {
+    width: 250px;
+    height: 300px;
+    margin: 5px;
+    position: relative;
+}
+
+.component-systemTabs .cards .card img {
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    max-height: 300px;
+}
+
+.component-systemTabs .cards .card .cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.65);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.component-systemTabs .cards .card .cardContent h2 {
+    color: rgba(255, 255, 255, 1);
+}
+
+.component-systemTabs .cards .card .cardContent button {
+    border: 0;
+    background-color: rgba(248, 158, 53, 1);
+    padding: 7px 10px;
+    width: 100px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 900;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.component-systemTabs .cards .card .cardContent button:hover {
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+    font-size: 1.25rem;
+}
+
+.component-systemTabs .cards .card .cardContent:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.component-systemTabs .cards .card .cardContent:hover button {
+    opacity: 1;
+}
