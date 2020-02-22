@@ -6,6 +6,8 @@ const url = require("url");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 
+// template engine
+
 // passport
 const passport = require("passport");
 
@@ -51,7 +53,7 @@ app.use(
     saveUninitialized: true
   })
 );
-app.use(cookieParser());
+app.use(cookieParser("Ennovate"));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -134,8 +136,19 @@ app.get("/auth/google/callback", (req, res, next) => {
 });
 
 app.get("/Home", (req, res) => {
-  console.log(req.user);
-  res.render("Home", { user: req.user });
+  if (req.user) {
+    if (req.user.displayName == null) {
+      // for github
+      res.render("Home", { name: req.user.username, user: req.user });
+    } else {
+      res.render("Home", { name: req.user.displayName, user: req.user });
+    }
+    if (req.user.displayName == null || req.user.profile === "google") {
+      res.render("Home", { name: req.user.username, user: req.user });
+    }
+  } else {
+    res.redirect("/Register");
+  }
 });
 
 // check auth status
@@ -158,12 +171,15 @@ app.post("/logout", (req, res, next) => {
 
 app.get("/Register", function(req, res) {
   res.set("Cache-Control", "public, max-age=300,s-maxage=900");
+  if (req.user) {
+    res.redirect("/Home");
+  } else {
+    return res.status(201).render("Register", {
+      data: Date.now()
+    });
+  }
   // const { host, hostname, path } = UrlCOnfig();
   // const str = path.split("/");
-  return res.status(201).render("Register", {
-    data: Date.now(),
-    completeHostUrl: path + "/Register"
-  });
 });
 
 app.post("/Register", function(req, res) {
@@ -230,7 +246,7 @@ app.post("/Register", function(req, res) {
               cnumber,
               main_email
             });
-            res.redirect("/login");
+            res.redirect("/Dash");
           })
           .catch(err => {
             console.log(err);

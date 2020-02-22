@@ -1,168 +1,515 @@
-<!DOCTYPE html>
-<html lang="en">
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  id="bootstrap-css"
+/>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,700,900,300,100' rel='stylesheet'
-        type='text/css'>
-    <title>Regsiter Form</title>
-</head>
+<link
+  href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap"
+  rel="stylesheet"
+/>
 
-<body>
-    <div class="overlay">
-        <div class="wrap">
-            <h1>Ennovate </h1>
-            <form action={{ completeHostUrl }} method="POST">
-                <input type="text" placeholder="Cool Team Name.." name="Team_name" placeholder="Username">
-                <input type="text" placeholder="Team Leader Name" name="Team_Leader" placeholder="Password">
-                <input type="number" placeholder="Contact Number" name="cnumber">
-                <input type="email" placeholder="Team Leader Email Id.." name="main_email">
-                <input type="number" placeholder="Alternate Contact.." name="alt_contact">
-                <input type="email" placeholder="Alternate Email.. " name="alt_email">
-                <textarea type="text" name="players Names" placeholder="Your Team"></textarea>
-                <input type="text" placeholder="College Name .. " name="college_name">
-                <input type="submit" value="Register">
-            </form>
-            <a href="http://localhost:5001/registration-details-a127d/us-central1/Ennovate/Google"><i class="fa fa-google"></i>Sign with Google</a>
-            <a href="http://localhost:5001/registration-details-a127d/us-central1/Ennovate/facebook"><i class="fa fa-facebook"></i>Sign with Google</a>
-            <a href="http://localhost:5001/registration-details-a127d/us-central1/Ennovate/github"><i class="fa fa-github"></i>Sign with Google</a>
+<section class="ready__started project__form">
+  <div class="container">
+    <h3 class="text-center">Ennovate Register Form</h3>
+    <div class="ready__started-box">
+      <form class="main__form">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                aria-describedby="firstName"
+                placeholder="Cool Team Name.."
+                name="Team_name"
+                required
+              />
+              <label for="firstName">Team_name*</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                name="Team_Leader"
+                aria-describedby="lastName"
+                placeholder="Team Leader Name"
+                required
+              />
+              <label for="lastName">Team_Leader Name*</label>
+            </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="email"
+                name="main_email"
+                placeholder="Team Leader Email Id.."
+                required
+              />
+              <label for="email">Team Leader Email Id..*</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="contactNumber"
+                aria-describedby="contactNumber"
+                placeholder="Contact Number(xxx-xxx-xxxx)"
+                name="cnumber"
+                required
+              />
+              <label for="contactNumber">Main Contact Number*</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="company"
+                aria-describedby="company"
+                placeholder="Alternate Contact.."
+                name="alt_contact"
+                required
+              />
+              <label for="company">Alternate Contact..*</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                name="alt_email"
+                id="webSite"
+                aria-describedby="webSite"
+                placeholder="Alternate Email.. "
+                required
+              />
+              <label for="webSite">Alternate Email..*</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-message">
+          <textarea
+            class="form-control"
+            id="message"
+            name="players_Names"
+            rows="6"
+            placeholder="Your Team"
+          ></textarea>
+          <label for="message">Team Name Player</label>
+        </div>
+
+        <div class="btn btn-block btn-info">
+          <a
+            style="font-size: 16px;color: #000;"
+            href="/auth/facebook"
+            class="font-weight-bold text-center text-secondary"
+            >Facebook</a
+          >
+        </div>
+
+        <div class="btn btn-block btn-danger">
+          <a
+            style="font-size: 16px;color: #000;"
+            href="/auth/github"
+            class="font-weight-bold text-center text-secondary"
+            >Github</a
+          >
+        </div>
+
+        <div class="btn btn-block btn-success">
+          <a
+            style="font-size: 16px;color: #000;"
+            href="/auth/google"
+            class="font-weight-bold text-center text-secondary"
+            >Google</a
+          >
+        </div>
+
+        <br /><br />
+        <div class="form-groups">
+          <label class="btn-attached" for="attached_file"
+            ><i class="fa fa-paperclip" aria-hidden="true"></i> Attach
+            File</label
+          >
+          <input
+            style="display: none"
+            type="file"
+            class="form-control-file"
+            id="attached_file"
+          />
+        </div>
+        <div class="form-groups form-check">
+          <input type="checkbox" class="form-check-input" id="checkBox" />
+          <label class="form-check-label" for="checkBox"
+            >I consent to receive communications from Resourcifi and collect my
+            submitted data. For more details, check out our Privacy
+            Policy.</label
+          >
+        </div>
+        <div class="text-center mb-3">
+          <button type="submit" class=" btn btn-get">
+            <span>Register !</span>
+          </button>
+        </div>
+      </form>
     </div>
-</body>
+  </div>
+</section>
 <style>
-    .overlay {
-  position: fixed;
-  background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/footer_lodyas.png);
-  -webkit-animation: 100s scroll infinite linear;
-  -moz-animation: 100s scroll infinite linear;
-  -o-animation: 100s scroll infinite linear;
-  -ms-animation: 100s scroll infinite linear;
-  animation: 100s scroll infinite linear;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-h1 {
-  text-align: center;
-  color: #fff !important;
-  margin-top: 20%;
-  font: 60px Lobster;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.1);
-}
-
-p {
-  color: #fff;
-  text-align: center;
-  font: 15px Lobster;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.1);
-}
-
-@-webkit-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
+  html {
+    font-size: 10px;
   }
-}
-
-@-moz-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
+  .btn-get {
+    font-size: 1.8rem;
+    font-family: "Quicksand", sans-serif;
+    color: #fff !important;
+    text-transform: capitalize;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#b70b83),
+      to(#33077f)
+    );
+    background-image: linear-gradient(to right, #b70b83, #33077f);
+    padding: 10px 20px 10px;
+    position: relative;
+    border: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    text-transform: capitalize !important;
   }
-}
 
-@-o-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
+  .btn-get::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 100%;
+    width: 0;
+    left: 0;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#33077f),
+      to(#b70b83)
+    );
+    background-image: linear-gradient(to right, #33077f, #b70b83);
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
   }
-}
 
-@-ms-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
+  .btn-get:hover::before {
+    width: 100%;
   }
-}
 
-@keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
+  .btn-get span {
+    position: relative;
+    z-index: 2;
   }
-}
 
-.wrap {
-  width: 400px;
-  margin: 0 auto;
-}
+  .main__form .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+  }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  font: 13px Raleway;
-}
+  .main__form .form-group label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    color: #575757;
+    padding: 0 2.5rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 0;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
 
-input[type="submit"] {
-  background: #e74c3c;
-  color: #fff;
-  width: 105%;
-  padding: 15px;
-  font-weight: 700;
-  opacity: 0.8;
-}
+  .main__form .form-group input,
+  .main__form .form-group textarea {
+    font-size: 1.6rem;
+    border-color: #f7f7f7;
+    padding: 0 2.5rem;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+  }
 
-input[type="submit"]:hover {
-  cursor: pointer;
-  opacity: 1;
-}
+  .main__form .form-group input:not(:placeholder-shown) + label,
+  .main__form .form-group textarea:not(:placeholder-shown) + label {
+    top: 2%;
+    background: #fff;
+    z-index: 2;
+    font-weight: 600;
+  }
 
-input[type="text"]:focus {
-  border-left: 5px solid #e74c3c;
-  -webkit-transition: 0.4s ease;
-}
+  .main__form .form-group input:focus,
+  .main__form .form-group textarea:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 
-input[type="email"]:focus {
-  border-left: 5px solid #e74c3c;
-  -webkit-transition: 0.4s ease;
-}
+  .main__form .form-group input:focus::-webkit-input-placeholder,
+  .main__form .form-group textarea:focus::-webkit-input-placeholder {
+    color: #999;
+  }
 
-.fa-newspaper-o {
-  font-size: 70% !important;
-  margin-right: 10px;
-  position: relative;
-  top: -4px;
-}
+  .main__form .form-group input:focus:-ms-input-placeholder,
+  .main__form .form-group textarea:focus:-ms-input-placeholder {
+    color: #999;
+  }
 
-a {
-  font: 13px Raleway;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  opacity: 0.6;
-}
+  .main__form .form-group input:focus::-ms-input-placeholder,
+  .main__form .form-group textarea:focus::-ms-input-placeholder {
+    color: #999;
+  }
 
-a:hover {
-  opacity: 1;
-}
+  .main__form .form-group input:focus::placeholder,
+  .main__form .form-group textarea:focus::placeholder {
+    color: #999;
+  }
 
-.fa-user,
-.fa-question {
-  margin-right: 5px;
-}
+  .main__form .form-group input:focus + label,
+  .main__form .form-group textarea:focus + label {
+    background: #fff;
+    z-index: 2;
+    top: 2%;
+    font-weight: 600;
+  }
 
-.fa-user {
-  margin-left: 5px;
-}
+  .main__form .form-group input::-webkit-input-placeholder,
+  .main__form .form-group textarea::-webkit-input-placeholder {
+    color: transparent;
+  }
 
+  .main__form .form-group input:-ms-input-placeholder,
+  .main__form .form-group textarea:-ms-input-placeholder {
+    color: transparent;
+  }
 
+  .main__form .form-group input::-ms-input-placeholder,
+  .main__form .form-group textarea::-ms-input-placeholder {
+    color: transparent;
+  }
 
+  .main__form .form-group input::placeholder,
+  .main__form .form-group textarea::placeholder {
+    color: transparent;
+  }
+
+  .main__form .form-group input {
+    height: 6rem;
+  }
+
+  .main__form .form-group.form-message label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.6rem;
+    color: #575757;
+    padding: 2.5rem;
+    position: absolute;
+    top: -5%;
+    -webkit-transform: unset;
+    transform: unset;
+    z-index: 0;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+
+  .main__form .form-group.form-message textarea {
+    padding: 2.5rem;
+  }
+
+  .main__form
+    .form-group.form-message
+    textarea:not(:placeholder-shown)
+    + label {
+    top: -8% !important;
+    background: #fff;
+    z-index: 2;
+    font-weight: 600;
+    padding: 0 2.5rem !important;
+  }
+
+  .main__form .form-group.form-message textarea:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .main__form
+    .form-group.form-message
+    textarea:focus::-webkit-input-placeholder {
+    color: #999;
+  }
+
+  .main__form .form-group.form-message textarea:focus:-ms-input-placeholder {
+    color: #999;
+  }
+
+  .main__form .form-group.form-message textarea:focus::-ms-input-placeholder {
+    color: #999;
+  }
+
+  .main__form .form-group.form-message textarea:focus::placeholder {
+    color: #999;
+  }
+
+  .main__form .form-group.form-message textarea:focus + label {
+    background: #fff;
+    z-index: 2;
+    top: -8% !important;
+    font-weight: 600;
+    padding: 0 2.5rem !important;
+  }
+
+  .main__form label.btn-attached {
+    background: #b30b83;
+    padding: 11px 42px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.6rem;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+
+  .main__form label.btn-attached:hover {
+    cursor: pointer;
+    background: #33077f;
+  }
+
+  .main__form .form-groups.form-check {
+    margin: 1.5rem 0;
+  }
+
+  .main__form .form-groups.form-check input {
+    position: relative;
+  }
+
+  .main__form .form-groups.form-check label {
+    font-size: 1.4rem;
+    color: #718399;
+  }
+
+  .main__form button.btn.btn-get {
+    position: relative;
+    top: 0px;
+    margin: 0 0 -80px;
+    font-size: 20px;
+  }
+
+  .project__form {
+    font-size: 1.6rem;
+  }
+
+  .project__form h3 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 4.1rem;
+    color: #272727;
+    line-height: 8.8rem;
+    color: #fff;
+  }
+
+  .project__form::before {
+    display: none;
+  }
+
+  .ready__started {
+    background: linear-gradient(150deg, #b70b83, #33077f);
+    background-size: 200% 200%;
+    -webkit-animation: AnimationGradient 5s ease infinite;
+    animation: AnimationGradient 5s ease infinite;
+    padding: 0rem 0 5rem;
+    position: relative;
+  }
+
+  .ready__started::before {
+    background: url(../images/dot-back.png) no-repeat bottom right/contain;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .ready__started p {
+    color: #fff;
+  }
+
+  .ready__started-box {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 5px;
+    margin-top: 0rem;
+  }
+
+  .ready__started-box h3 {
+    font-size: 5rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+  }
+
+  .ready__started-box p {
+    color: #272727;
+    font-size: 2.2rem;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  @-webkit-keyframes AnimationGradient {
+    0% {
+      background-position: 26% 0%;
+    }
+    50% {
+      background-position: 75% 100%;
+    }
+    100% {
+      background-position: 26% 0%;
+    }
+  }
+
+  @keyframes AnimationGradient {
+    0% {
+      background-position: 26% 0%;
+    }
+    50% {
+      background-position: 75% 100%;
+    }
+    100% {
+      background-position: 26% 0%;
+    }
+  }
+
+  section.ready__started.project__form {
+    margin-bottom: 40rem;
+  }
+
+  section.ready__started.project__form .ready__started-box {
+    position: relative;
+    margin-bottom: -40rem;
+    -webkit-box-shadow: 0 3px 3.2rem rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 3.2rem rgba(0, 0, 0, 0.08);
+  }
 </style>
-
-</html>
