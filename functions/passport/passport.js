@@ -91,6 +91,7 @@ passport.use(
           if (data.exists) {
             return done(null, { err: "loading file err" });
           } else {
+            // get the user email and password
             return done(null, { email, password });
           }
         });

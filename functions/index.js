@@ -22,6 +22,7 @@ const { firebaseConfig, maliguns } = require("./configs/config");
 const developmentUrl = "";
 
 admin.initializeApp();
+firebase.initializeApp(firebaseConfig);
 
 // express functions and middlewares
 const express = require("express");
@@ -144,10 +145,11 @@ app.get("/Home", (req, res) => {
       res.render("Home", { name: req.user.displayName, user: req.user });
     }
     if (req.user.displayName == null || req.user.profile === "google") {
+      console.log(req.user);
       res.render("Home", { name: req.user.username, user: req.user });
     }
   } else {
-    res.redirect("/Register");
+    res.redirect("/Login");
   }
 });
 
@@ -166,7 +168,7 @@ app.post("/logout", (req, res, next) => {
     console.log("session destroyed");
   });
   req.logOut();
-  res.redirect("/Register");
+  res.redirect("/Login");
 });
 
 app.get("/Register", function(req, res) {
@@ -196,12 +198,19 @@ app.post("/Register", function(req, res) {
     from: "vedang.parasnis@somaiaya.edu",
     to: "vedang.parasnis@somaiya.edu",
     subject: "Registration for Ennovate",
-    text: `Please Share this code with all Team Members 
+    text: `The Team code for your Team IS
         ${random}
-        <br />
         Thank You from BloomBox Team !!
     `
   };
+
+  firestores
+    .doc(`/admin/${Team_name}`)
+    .set({ teamSecret: random })
+    .then(msg => {})
+    .catch(err => {
+      console.log(err);
+    });
 
   // create a multer storage
   const storage = multer.diskStorage({
@@ -246,7 +255,7 @@ app.post("/Register", function(req, res) {
               cnumber,
               main_email
             });
-            res.redirect("/Dash");
+            res.redirect("/Login");
           })
           .catch(err => {
             console.log(err);
@@ -255,12 +264,15 @@ app.post("/Register", function(req, res) {
     });
 });
 
-const port = process.env.PORT || 3000;
-
-app.get("/login", function(req, res) {
+// passport custom user method login here
+app.get("/Login", function(req, res) {
   // login with passport local
-  req.session.destroy();
-  res.send("login Here");
+  if (req.user) {
+    res.redirect("/Home");
+  } else {
+    res.render("Login", { msg: "custom login" });
+  }
+  // login before any destroy of template
 });
 
 app.post("/Login", (req, res, next) => {
@@ -275,10 +287,22 @@ app.post("/Login", (req, res, next) => {
         console.log(req.user);
         //if successful login by middleware
         res.cookie("user", user, { expire: new Date() + 9999 });
+        // firebase scan for user
+        console.log(req.user);
         return res.json(req.user);
       });
     }
   )(req, res, next);
 });
+
+app.get("/Dash", async (req, res) => {
+  if (req.user || req.session) {
+    res.render("DashBoard", { data: req.user });
+  } else {
+    res.redirect("/Login");
+  }
+});
+
+const port = process.env.PORT || 3000;
 
 app.listen(3000);
