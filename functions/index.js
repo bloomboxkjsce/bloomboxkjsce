@@ -1,5 +1,4 @@
 const firebase = require("firebase");
-const admin = require("firebase-admin");
 const cors = require("cors");
 const path = require("path");
 const url = require("url");
@@ -21,7 +20,6 @@ const { firebaseConfig, maliguns } = require("./configs/config");
 
 const developmentUrl = "";
 
-admin.initializeApp();
 firebase.initializeApp(firebaseConfig);
 
 // express functions and middlewares
@@ -32,7 +30,7 @@ const bodyParser = require("body-parser");
 const multer = require("multer");
 
 const app = express();
-const firestores = admin.firestore();
+const firestores = firebase.firestore();
 
 // email generator for random userid name
 const randomstring = require("randomstring");
@@ -180,14 +178,26 @@ app.get("/Register", function(req, res) {
       data: Date.now()
     });
   }
-  // const { host, hostname, path } = UrlCOnfig();
-  // const str = path.split("/");
 });
 
+// workflow
+// 1 register the user firsy
+// 2 send email about the team code
+// 3 add secret for the team in admin database
+// 4 add records in firestore and corr clound functions
+// 5 return login on success
+
 app.post("/Register", function(req, res) {
+  console.log("post from triggered");
   // res.set("Cache-Control", "public, max-age=300,s-maxage=900");
   const { Team_name, Team_Leader, cnumber } = req.body;
-  const { main_email, alt_contact, alt_email, college_name } = req.body;
+  const {
+    main_email,
+    alt_contact,
+    alt_email,
+    college_name,
+    players_Names
+  } = req.body;
   const random = randomstring.generate({
     length: 15,
     charset: "alphabetic"
@@ -196,14 +206,15 @@ app.post("/Register", function(req, res) {
   //   only ma to 60 registrations
   const data = {
     from: "vedang.parasnis@somaiaya.edu",
-    to: "vedang.parasnis@somaiya.edu",
+    to: main_email,
     subject: "Registration for Ennovate",
-    text: `The Team code for your Team IS
+    text: `The Team code for your Team is
         ${random}
         Thank You from BloomBox Team !!
     `
   };
 
+  // the teamsecrets for the each team
   firestores
     .doc(`/admin/${Team_name}`)
     .set({ teamSecret: random })
@@ -223,7 +234,7 @@ app.post("/Register", function(req, res) {
     .get()
     .then(msg => {
       if (msg.exists) {
-        return res.json({ err: "please dont register agin we know you!!" });
+        return res.json({ err: "please dont register again we know you!!" });
       } else {
         firestores
           .doc(`Ennovate2k20/${Team_name}`)
@@ -234,7 +245,9 @@ app.post("/Register", function(req, res) {
             Contact_Email: main_email,
             Alternate_contact: alt_contact,
             Alternate_email: alt_email,
-            CollegeName: college_name
+            CollegeName: college_name,
+            // assign the team player in firebase
+            Team_Members: players_Names
           })
           .then(addStatus => {
             console.log("user is added and a email is been send" + addStatus);
@@ -246,7 +259,6 @@ app.post("/Register", function(req, res) {
               domain: maliguns.DOMAIN
             });
             mg.messages().send(data, function(err, body) {
-              console.log(body);
               console.log("message is send with code" + random);
             });
             res.cookie("user", {
@@ -267,37 +279,33 @@ app.post("/Register", function(req, res) {
 // passport custom user method login here
 app.get("/Login", function(req, res) {
   // login with passport local
-  if (req.user) {
-    res.redirect("/Home");
+  if (req.user || req.session.email) {
+    if (req.session.email && req.session.method === "Local") {
+      res.redirect("/DashBoard");
+    } else {
+      res.redirect("/Home");
+    }
   } else {
-    res.render("Login", { msg: "custom login" });
+    res.render("Login", {
+      msg: "custom login",
+      data: "login here with your team name and secret as password"
+    });
   }
   // login before any destroy of template
 });
 
-app.post("/Login", (req, res, next) => {
-  passport.authenticate(
-    "local",
-    { failureRedirect: "/Login" },
-    (err, user, info) => {
-      //   return by attaching user to req else null as
-      // success by attaching object to the body after serialize
-      // extablish login session for the req.body
-      req.logIn(user, err => {
-        console.log(req.user);
-        //if successful login by middleware
-        res.cookie("user", user, { expire: new Date() + 9999 });
-        // firebase scan for user
-        console.log(req.user);
-        return res.json(req.user);
-      });
-    }
-  )(req, res, next);
+const { auth } = require("./passport/customMiddlewares");
+
+app.post("/Login", auth, (req, res) => {
+  if (req.user) {
+    console.log("got req.user");
+    return res.redirect("/DashBoard");
+  }
 });
 
-app.get("/Dash", async (req, res) => {
-  if (req.user || req.session) {
-    res.render("DashBoard", { data: req.user });
+app.get("/DashBoard", (req, res) => {
+  if (req.user || (req.session.email && req.session.method === "Local")) {
+    res.render("DashBoards", { data: req.user });
   } else {
     res.redirect("/Login");
   }

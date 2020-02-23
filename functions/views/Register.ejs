@@ -16,7 +16,7 @@
   <div class="container">
     <h3 class="text-center">Ennovate Register Form</h3>
     <div class="ready__started-box">
-      <form method="POST"  class="main__form" action="/Register">
+      <form class="main__form" action="/Register" method="POST">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -115,9 +115,23 @@
             rows="6"
             placeholder="Your Team"
           ></textarea>
-          <label for="message">Team Name Player</label>
+          <label for="message">Team Participant Names</label>
         </div>
 
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="college_name"
+              id="webSite"
+              aria-describedby="college_name"
+              placeholder="Your college_name .. "
+              required
+            />
+            <label for="webSite">Your college_name .*</label>
+          </div>
+        </div>
 
         <br /><br />
         <div class="form-groups">
@@ -142,13 +156,18 @@
         </div>
         <div class="text-center mb-3">
           <button type="submit" class=" btn btn-get">
-            <span>Register !</span>
+            Register
           </button>
         </div>
       </form>
     </div>
   </div>
 </section>
+<script>
+  document.querySelector("form").addEventListener("submit", e => {
+    console.log("doing a post request now");
+  });
+</script>
 <style>
   html {
     font-size: 10px;

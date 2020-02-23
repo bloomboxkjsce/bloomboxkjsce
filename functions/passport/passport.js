@@ -3,10 +3,27 @@ const passport = require("passport");
 const facebook = require("passport-facebook");
 const github = require("passport-github");
 const google = require("passport-google-oauth20");
-const local = require("passport-local");
 
 const firebase = require("firebase");
-const admin = require("firebase-admin");
+
+const addUserToFirebase = ({ id, displayName, provider }, imageUrl) => {
+  // team leader is the first one
+  firebase
+    .firestore()
+    .doc(`/${provider}/displayName`)
+    .set({
+      id,
+      Team_Leader: displayName,
+      provider,
+      image: imageUrl
+    })
+    .then(msg => {
+      console.log("user is added");
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
 
 const {
   developmentUrl,
@@ -17,7 +34,8 @@ const {
 
 // serialize the user for all
 passport.serializeUser((user, done) => {
-  // styff in cookie
+  // stuff in cookie
+
   done(null, user);
 });
 
@@ -37,6 +55,9 @@ passport.use(
     },
     function(accessToken, refreshToken, profile, done) {
       console.log("facebook");
+      console.log(profile);
+      const { id, displayName, provider } = profile;
+      addUserToFirebase({ id, displayName, provider }, profile.photos[0].value);
       return done(null, profile);
     }
   )
@@ -70,31 +91,6 @@ passport.use(
       console.log("google");
       // no need to validate
       return done(null, profile);
-    }
-  )
-);
-
-// local strat
-passport.use(
-  // error and user object
-  new local(
-    {
-      usernameField: "email",
-      passwordField: "password"
-    },
-    (email, password, done) => {
-      firebase
-        .firestore()
-        .doc(`/Ennovate2k20/${email}`)
-        .get()
-        .then(data => {
-          if (data.exists) {
-            return done(null, { err: "loading file err" });
-          } else {
-            // get the user email and password
-            return done(null, { email, password });
-          }
-        });
     }
   )
 );
