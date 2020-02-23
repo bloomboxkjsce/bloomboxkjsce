@@ -2,14 +2,14 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
-    "serve": "firebase serve --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log",
-    "develop": "node index.js",
+    "devs_init": "npm init",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "dependencies": {
     "body-parser": "^1.19.0",
     "consolidate": "^0.15.1",
