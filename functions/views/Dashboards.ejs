@@ -17,15 +17,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
 
+        
     <body class="home">
         <div class="container-fluid display-table">
             <div class="row display-table-row">
                 <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
                     <div class="logo">
-                        <a hef="home.html"><img src="http://jskrishna.com/work/merkury/images/logo.png"
-                                alt="merkery_logo" class="hidden-xs hidden-sm" />
-                            <img src="http://jskrishna.com/work/merkury/images/circle-logo.png" alt="merkery_logo"
-                                class="visible-xs visible-sm circle-logo" />
+                        <a hef="home.html">
+                            <img style="border-radius: 50%; opacity: 0.5s;object-fit: cover; margin-bottom: 10px;" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                alt="merkery_logo"/>
+                           
                         </a>
                     </div>
                     <div class="navi">
@@ -43,7 +44,7 @@
                             <li>
                                 <form method="POST" action="/logout">
                                     <i class="fa fa-logout" aria-hidden="true"></i>
-                                    <button type="submit" class="btn btn-danger">
+                                    <button type="submit" class="btn btn-danger btn-block">
                                         Logout
                                     </button>
                                 </form>
@@ -67,19 +68,23 @@
                                         </button>
                                     </div>
                                 </nav>
-                                <div class="search hidden-xs hidden-sm">
-                                    <input type="text" placeholder="Search" id="search" />
-                                </div>
                             </div>
                             <div class="col-md-5">
                                 <div class="header-rightside">
                                     <ul class="list-inline header-top pull-right">
 
                                         <li>
-                                            <a href="#"><i class="fa fa-envelope" aria-hidden="true">
-                                                </i>
-                                                <b>Team-Leader </b>
-                                            </a>
+                                                <span>
+                                                        <a href="/DashBoard">
+                                                            </i>
+                                                            <% if (username) { %>
+                                                               <b>Team</b>
+                                                                <div class="font-weight-bold" style="font-weight: 800; color: green;font-size: 20px;">
+                                                                <%= username %>
+                                                            </div>
+                                                            <% } %>
+                                                        </a>
+                                                </span>
                                         </li>
                                     </ul>
                                     </li>
@@ -89,77 +94,76 @@
                         </header>
                     </div>
                     <div class="user-dashboard">
-                        <h1>Hello, JS</h1>
+                        <h1>Hello Welcome to Ennovate</h1>
+                        <br>
+                        <span class="font-weight-bold">This is your DashBoard</span>
                         <div class="row">
-                            <div class="col-md-5 col-sm-5 col-xs-12 gutter">
-                                <div class="sales">
-                                    <h2>Your Sale</h2>
+                            <div class="col-md-3 list-group">
+                                    <div class="list-group-item">
+                                       <%= user_members[0] %> 
+                                    </div>
+                                 
+                            </div>
+                        </div>
+                        <br><br>
+                        <hr class="style1">
+                        
+                        <!-- upload resume here -->
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                    <form role="form" class="form-group" action="/upload" enctype="multipart/form-data" method="POST">
+                                        <div class="form-group float-label-control">
+                                            <label for="">Team Name</label>
+                                            <input type="text" class="form-control" value="Team <%= username  %> " disabled>
+                                        </div>
+                                        <div class="form-group float-label-control">
+                                            <label for="">Upload Your Doc</label>
+                                            <input class="form-control" type="file" name="resume"/>
+                                        </div>
+                                        <button class="btn btn-warning" type="submit">
+                                            Upload Buisness Document
+                                        </button>
+                                    </form>
 
-                                    <div class="btn-group">
-                                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span>Period:</span> Last Year
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a href="#">2012</a>
-                                            <a href="#">2014</a>
-                                            <a href="#">2015</a>
-                                            <a href="#">2016</a>
-                                        </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title border-bottom pb-3">Card title <a href="#"
+                                                class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a>
+                                        </h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-sm btn-info float-right">Read more <i
+                                                class="fas fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-7 col-sm-7 col-xs-12 gutter">
-                                <div class="sales report">
-                                    <h2>Report</h2>
-                                    <div class="btn-group">
-                                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span>Period:</span> Last Year
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a href="#">2012</a>
-                                            <a href="#">2014</a>
-                                            <a href="#">2015</a>
-                                            <a href="#">2016</a>
-                                        </div>
+                            <div class="col-md-4">
+                                <div class="card bg-light">
+                                    <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title border-bottom pb-3">Card title <a href="#"
+                                                class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a>
+                                        </h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                            card's content.</p>
+                                        <a href="#" class="btn btn-sm btn-info float-right">Read more <i
+                                                class="fas fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Modal -->
-        <div id="add_project" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header login-header">
-                        <button type="button" class="close" data-dismiss="modal">
-                            ×
-                        </button>
-                        <h4 class="modal-title">Add Project</h4>
-                    </div>
-                    <div class="modal-body">
-                        <input type="text" placeholder="Project Title" name="name" />
-                        <input type="text" placeholder="Post of Post" name="mail" />
-                        <input type="text" placeholder="Author" name="passsword" />
-                        <textarea placeholder="Desicrption"></textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="cancel" data-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="add-project" data-dismiss="modal">
-                            Save
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <br>
+       
+   
     </body>
 </body>
 <style>
@@ -167,6 +171,10 @@
 
 
     /*Login Signup Page*/
+    hr.style1{
+	border-top: 1px solid #8c8b8b;
+}
+
     a:focus,
     a:hover,
     a {

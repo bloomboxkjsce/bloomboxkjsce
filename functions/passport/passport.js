@@ -6,11 +6,12 @@ const google = require("passport-google-oauth20");
 
 const firebase = require("firebase");
 
+// for facebook
 const addUserToFirebase = ({ id, displayName, provider }, imageUrl) => {
   // team leader is the first one
   firebase
     .firestore()
-    .doc(`/${provider}/displayName`)
+    .doc(`/${provider}/${displayName}`)
     .set({
       id,
       Team_Leader: displayName,
@@ -35,7 +36,6 @@ const {
 // serialize the user for all
 passport.serializeUser((user, done) => {
   // stuff in cookie
-
   done(null, user);
 });
 
@@ -63,6 +63,24 @@ passport.use(
   )
 );
 
+const addGithubUser = ({ id, username, profileUrl, provider }) => {
+  firebase
+    .firestore()
+    .doc(`/${provider}/${username}`)
+    .set({
+      id,
+      Team_Leader: username,
+      provider,
+      image: profileUrl
+    })
+    .then(msg => {
+      console.log("user is added to github");
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
+
 // github
 passport.use(
   new github(
@@ -72,11 +90,30 @@ passport.use(
       callbackURL: `/auth/github/callback`
     },
     function(accessToken, refreshToken, profile, done) {
-      console.log("github");
+      const { id, username, profileUrl, provider } = profile;
+      addGithubUser({ id, username, profileUrl, provider });
       return done(null, profile);
     }
   )
 );
+
+const addGoogleUse = ({ id, displayName, name, provider }) => {
+  firebase
+    .firestore()
+    .doc(`/${provider}/${displayName}`)
+    .set({
+      id,
+      Team_Leader: displayName,
+      details: name,
+      provider
+    })
+    .then(msg => {
+      console.log("user is added to github");
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
 
 // google
 passport.use(
@@ -88,7 +125,10 @@ passport.use(
       scope: ["profile"]
     },
     function(accessToken, refreshToken, profile, done) {
-      console.log("google");
+      const { id, displayName, name, provider } = profile;
+      if (name) {
+        addGoogleUse({ id, displayName, name, provider });
+      }
       // no need to validate
       return done(null, profile);
     }

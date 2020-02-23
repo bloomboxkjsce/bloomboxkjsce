@@ -133,33 +133,21 @@
           </div>
         </div>
 
-        <br /><br />
-        <div class="form-groups">
-          <label class="btn-attached" for="attached_file"
-            ><i class="fa fa-paperclip" aria-hidden="true"></i> Attach
-            File</label
-          >
-          <input
-            style="display: none"
-            type="file"
-            class="form-control-file"
-            id="attached_file"
-          />
-        </div>
-        <div class="form-groups form-check">
-          <input type="checkbox" class="form-check-input" id="checkBox" />
-          <label class="form-check-label" for="checkBox"
-            >I consent to receive communications from Resourcifi and collect my
-            submitted data. For more details, check out our Privacy
-            Policy.</label
-          >
-        </div>
         <div class="text-center mb-3">
-          <button type="submit" class=" btn btn-get">
+          <button type="submit" class=" btn btn-info btn-block">
             Register
           </button>
         </div>
       </form>
+      <span class="text-center text-lead">
+        Already a User
+        <span>
+          <a href="/Login">Login</a>
+        </span>
+      </span>
+      <span class="text-center">
+        LogIn with Google Facebook
+      </span>
     </div>
   </div>
 </section>
@@ -171,6 +159,15 @@
 <style>
   html {
     font-size: 10px;
+  }
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 2s all ease-in;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #33077f;
   }
   .btn-get {
     font-size: 1.8rem;

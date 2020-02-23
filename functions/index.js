@@ -1,12 +1,12 @@
 const firebase = require("firebase");
 const cors = require("cors");
 const path = require("path");
-const url = require("url");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const upload = require("express-fileupload");
+const storage = require("firebase/storage");
 
 // template engine
-
 // passport
 const passport = require("passport");
 
@@ -42,7 +42,6 @@ const assetsPath = path.join(__dirname, "public");
 // cors
 app.use(cors());
 app.use(express.json());
-
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
@@ -55,8 +54,8 @@ app.use(
 app.use(cookieParser("Ennovate"));
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(express.static(assetsPath));
+app.use(upload());
 // view engine
 app.engine("ejs", consolidate.ejs);
 app.set("views", "./views");
@@ -81,6 +80,8 @@ app.get("/auth/facebook/callback", (req, res, next) => {
       if (err) {
         return next(err);
       }
+      req.session.user = req.user;
+
       res.redirect("/Home");
     });
   })(req, res, next);
@@ -105,6 +106,8 @@ app.get("/auth/github/callback", (req, res, next) => {
       if (err) {
         return next(err);
       }
+      req.session.user = req.user;
+
       res.redirect("/Home");
     });
   })(req, res, next);
@@ -129,6 +132,7 @@ app.get("/auth/google/callback", (req, res, next) => {
       if (err) {
         return next(err);
       }
+      req.session.user = req.user;
       res.redirect("/Home");
     });
   })(req, res, next);
@@ -151,15 +155,6 @@ app.get("/Home", (req, res) => {
   }
 });
 
-// check auth status
-app.get("/auth", (req, res) => {
-  if (req.isAuthenticated()) {
-    res.json("the user is now on");
-  } else {
-    res.json("the user is not on");
-  }
-});
-
 // logout the user
 app.post("/logout", (req, res, next) => {
   req.session.destroy(msg => {
@@ -170,12 +165,16 @@ app.post("/logout", (req, res, next) => {
 });
 
 app.get("/Register", function(req, res) {
-  res.set("Cache-Control", "public, max-age=300,s-maxage=900");
-  if (req.user) {
-    res.redirect("/Home");
+  if (req.user || req.session.email) {
+    if (req.session.email && req.session.method === "Local") {
+      res.redirect("/DashBoard");
+    } else {
+      res.redirect("/Home");
+    }
   } else {
-    return res.status(201).render("Register", {
-      data: Date.now()
+    res.render("Register", {
+      openMessage: "custom Resgister",
+      data: "login here with your team name and secret as password"
     });
   }
 });
@@ -203,6 +202,8 @@ app.post("/Register", function(req, res) {
     charset: "alphabetic"
   });
 
+  console.log(players_Names);
+  const users = players_Names.split(" ");
   //   only ma to 60 registrations
   const data = {
     from: "vedang.parasnis@somaiaya.edu",
@@ -247,7 +248,7 @@ app.post("/Register", function(req, res) {
             Alternate_email: alt_email,
             CollegeName: college_name,
             // assign the team player in firebase
-            Team_Members: players_Names
+            Team_Members: users
           })
           .then(addStatus => {
             console.log("user is added and a email is been send" + addStatus);
@@ -281,13 +282,13 @@ app.get("/Login", function(req, res) {
   // login with passport local
   if (req.user || req.session.email) {
     if (req.session.email && req.session.method === "Local") {
-      res.redirect("/DashBoard");
+      return res.redirect("/DashBoard");
     } else {
-      res.redirect("/Home");
+      return res.redirect("/Home");
     }
   } else {
     res.render("Login", {
-      msg: "custom login",
+      openMessage: "custom login",
       data: "login here with your team name and secret as password"
     });
   }
@@ -305,10 +306,58 @@ app.post("/Login", auth, (req, res) => {
 
 app.get("/DashBoard", (req, res) => {
   if (req.user || (req.session.email && req.session.method === "Local")) {
-    res.render("DashBoards", { data: req.user });
+    console.log(req.session.curruser.Team_Members[0]);
+    const teamPlayers = req.session.curruser.Team_Members.map(use => {
+      return use;
+    });
+    return res.status(201).render("DashBoards", {
+      data: req.user,
+      username: req.session.curruser.Team_name,
+      user_members: teamPlayers,
+      length: teamPlayers.length
+    });
   } else {
     res.redirect("/Login");
   }
+  // if (req.user && req.session.email && req.session.method === "Local") {
+});
+
+// upload user resume docs to firestore
+app.post("/upload", function(req, res) {
+  let file;
+  if (!req.files) {
+    return res.status(201).render("Dashboards", { err: "file not found" });
+  }
+  file = req.files.FormFieldName;
+  // here is the field name of the form
+  const upload = firebase
+    .storage()
+    .ref(`${req.session.curruser.Team_name}/userData`)
+    .put(file);
+  // progress,error,complete
+  upload.on(
+    "state_changed",
+    snapshot => {
+      const progress =
+        // Math.floor(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.length(snapshot.totalBytes);
+    },
+    error => {
+      console.log(error);
+    },
+    () => {
+      firebaseStorage
+        .ref(req.session.curruser.Team_name)
+        .child()
+        .getDownloadURL()
+        .then(urls => {
+          console.log(urls);
+          res.render("Dashboards", {
+            msg: "the file is successfully uploaded"
+          });
+        });
+    }
+  );
 });
 
 const port = process.env.PORT || 3000;

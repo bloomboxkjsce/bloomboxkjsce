@@ -32,6 +32,7 @@ module.exports.auth = (req, res, next) => {
                     req.session.method = "Local";
                     console.log("reached here");
                     req.user = presents.data();
+                    req.session.curruser = presents.data();
                     next();
                   });
               } else {
