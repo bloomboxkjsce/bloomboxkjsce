@@ -66,6 +66,10 @@ app.get("/auth/facebook", (req, res, next) => {
   passport.authenticate("facebook")(req, res, next);
 });
 
+app.get("/", (req, res) => {
+  res.render();
+});
+
 app.get("/auth/facebook/callback", (req, res, next) => {
   passport.authenticate("facebook", (err, user, info) => {
     if (err) {
