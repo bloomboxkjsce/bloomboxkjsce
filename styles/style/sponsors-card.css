@@ -48,8 +48,9 @@
 
 .partners-logo img {
     width: 100%;
+    height: auto;
     padding: 5px;
-    height: 200px;
+    max-height: 200px;
     max-width: 200px;
     border-radius: 7.5px;
 }
