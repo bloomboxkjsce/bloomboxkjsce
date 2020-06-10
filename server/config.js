@@ -1,3 +1,3 @@
 module.exports = {
-  domain_name: "bloomboxkjsce.herokuapp.com"
+  domain_name: "www.bloomboxkjsce.com"
 };
