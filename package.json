@@ -9,7 +9,7 @@
   "scripts": {
     "init": "npm i",
     "build": "webpack",
-    "start": "webpack-dev-server --output-public-path=/distBabel/bundle.js"
+    "start": "webpack-dev-server --output-public-path=/distBabel/"
   },
   "repository": {
     "type": "git",
